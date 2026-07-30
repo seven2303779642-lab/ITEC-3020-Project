@@ -1,0 +1,29 @@
+{\rtf1\ansi\deff0
+{\fonttbl{\f0 Arial;}}
+{\colortbl;\red0\green0\blue0;}
+\paperw12240\paperh15840\margl1440\margr1440\margt1440\margb1440
+\pard\cf1\f0\fs40\b0\sb0\sa240 Project Notes\par
+\pard\cf1\f0\fs32\b0\sb360\sa120\keepn Yunshang Rice Noodle Official Website\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Role: Front-End Developer\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Technologies: Next.js, React, TypeScript, CSS, Framer Motion\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Designed and developed a responsive bilingual restaurant website with pages for menus, locations, promotions, and company information. The work included responsive implementation, reusable content configuration, visual QA, testing, bug fixing, and deployment.\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Live site: https://www.yunshang.ca/\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Repository: Private development repository. Clean public showcase repository to be added later.\par
+\pard\cf1\f0\fs32\b0\sb360\sa120\keepn SMME Full-Page Brand Landing Page\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Role: Front-End Developer\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Technologies: Next.js, TypeScript, Tailwind CSS, Framer Motion\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Built the core responsive full-page experience, five-scene navigation, scrolling interactions, mobile layouts, and motion effects. Later changes to the company's production website were completed separately and are not represented as my work.\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Personal preview: https://smme-landing-page.vercel.app/\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Repository: Private development repository. Clean public showcase repository to be added later.\par
+\pard\cf1\f0\fs32\b0\sb360\sa120\keepn VectorPath HUD\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Role: Developer\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Technologies: C#, Space Engineers Mod API, Rich HUD Framework\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Developed a client-side navigation and telemetry mod for Space Engineers. The project combines GPS selection, braking and ETA estimates, bilingual controls, customizable HUD panels, and cockpit-relative 3D guidance while keeping all ship controls read-only.\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Public link: Formal release repository to be added later.\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Repository: Private development repository.\par
+\pard\cf1\f0\fs32\b0\sb360\sa120\keepn Early Academic E-Portfolio\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Role: Content Structure and Webflow Template Customization\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Technology: Webflow\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Created an early academic e-portfolio for a technical writing course. The site organizes research and writing assignments and documents early experience with web-based presentation, information structure, and visual hierarchy.\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Live site: https://sevens-e-portfolio-site.webflow.io/\par
+}

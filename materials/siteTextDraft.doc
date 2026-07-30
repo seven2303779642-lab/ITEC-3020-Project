@@ -1,0 +1,29 @@
+{\rtf1\ansi\deff0
+{\fonttbl{\f0 Arial;}}
+{\colortbl;\red0\green0\blue0;}
+\paperw12240\paperh15840\margl1440\margr1440\margt1440\margb1440
+\pard\cf1\f0\fs40\b0\sb0\sa240 Site Text Draft\par
+\pard\cf1\f0\fs32\b0\sb360\sa120\keepn Home\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Main heading: Hello, I'm Songang Li.\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Subtitle: Information Technology (BA) Student\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Welcome text: I build responsive websites, interactive interfaces, software projects, and game modifications. I enjoy learning through practical work and turning ideas into useful digital products.\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Primary button: View My Projects\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Secondary button: Learn More About Me\par
+\pard\cf1\f0\fs32\b0\sb360\sa120\keepn About\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 I am an Information Technology student at York University with interests in web development, interface design, software development, and applied artificial intelligence. I learn best by building, testing, and improving practical projects.\par
+\pard\cf1\f0\fs32\b0\sb360\sa120\keepn Resume\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 This page provides an embedded copy of my resume and a download button for visitors who would like to review my education, technical skills, and project experience.\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Button text: Download Resume\par
+\pard\cf1\f0\fs32\b0\sb360\sa120\keepn Projects\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 The projects on this page include business websites, an interactive brand landing page, a game navigation mod, and an early academic portfolio. Each project reflects a different stage of my technical and design experience.\par
+\pard\cf1\f0\fs32\b0\sb360\sa120\keepn Blog\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 This blog documents how the JavaScript features in this portfolio were built, including the theme switcher, dynamic blog, contact form validation, and project filtering.\par
+\pard\cf1\f0\fs32\b0\sb360\sa120\keepn Contact\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 If you would like to discuss a project, internship, or collaboration, please use the contact form or connect with me through GitHub or LinkedIn.\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 GitHub: https://github.com/seven2303779642-lab\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 LinkedIn: https://www.linkedin.com/in/seven-li-569506422/\par
+\pard\cf1\f0\fs32\b0\sb360\sa120\keepn Navigation and Footer\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Navigation labels: Home, About, Resume, Projects, Blog, Contact\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Theme button labels: Switch to Dark Mode / Switch to Light Mode\par
+\pard\cf1\f0\fs22\b0\sb0\sa160\sl253\slmult1 Footer text: Copyright 2026 Songang Li. All rights reserved.\par
+}
