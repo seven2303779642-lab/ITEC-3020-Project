@@ -1,0 +1,43 @@
+ITEC 3020 Portfolio Theme Color Reference
+Decision date: July 30, 2026
+Visual inspiration: black, crimson, pink, gold, purple, and cool highlights
+Primary typeface: Space Grotesk
+
+LIGHT THEME
+
+Background:       #FBF7F8  Warm porcelain
+Surface:          #FFFFFF  White
+Text:             #171214  Ink black
+Muted text:       #734051  Muted wine
+Primary:          #A91F50  Wine magenta
+Primary dark:     #7D1540  Deep wine
+Crimson accent:   #B30A19  Deep crimson
+Soft highlight:   #F0B7CC  Blush pink
+Metal accent:     #D4A85D  Antique gold
+Purple accent:    #5F296F  Deep purple
+Cool highlight:   #A7C4CB  Icy blue-grey
+
+DARK THEME
+
+Background:       #0D0405  Near-black red
+Surface:          #171214  Ink black
+Raised surface:   #3D2B34  Dark brown-purple
+Text:             #F3E5DC  Warm ivory
+Muted text:       #CA7E8C  Dusty rose
+Primary:          #D41042  Bright crimson-magenta
+Primary dark:     #A91F50  Wine magenta
+Crimson accent:   #B30A19  Deep crimson
+Soft highlight:   #F0B7CC  Blush pink
+Metal accent:     #D4A85D  Antique gold
+Purple accent:    #5F296F  Deep purple
+Cool highlight:   #A7C4CB  Icy blue-grey
+
+USAGE NOTES
+
+Use black or warm porcelain for most large surfaces.
+Use wine magenta for primary buttons, links, and important headings.
+Use antique gold for small labels, focus states, borders, and status details.
+Use blush pink for subtle backgrounds and hover shadows.
+Use purple and icy blue-grey sparingly as secondary highlights.
+Do not make large sections entirely pink or gold.
+The dark-theme switching logic will be added in the future.
