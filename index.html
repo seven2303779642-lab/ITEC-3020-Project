@@ -40,180 +40,266 @@
     </header>
 
     <main id="main-content">
-      <section class="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-12 lg:py-28">
-        <div>
-          <p class="eyebrow">Information Technology · York University</p>
-          <h1 class="mt-6 max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.055em] sm:text-6xl lg:text-7xl">
-            I build useful digital experiences with
-            <span class="text-[#A91F50]">clarity and curiosity.</span>
-          </h1>
-          <p class="mt-7 max-w-2xl text-lg leading-8 text-[#4B424D] sm:text-xl">
-            I am Songang Li, an Information Technology student in Toronto. My work spans responsive
-            websites, interface design, desktop tools, and game modifications.
+      <section class="home-hero">
+        <p class="home-coordinate" aria-hidden="true">
+          System origin · 43.6532 N / 79.3832 W
+        </p>
+        <div class="home-orbit-field" aria-hidden="true">
+          <span></span>
+        </div>
+
+        <div class="home-hero-grid">
+          <div class="home-introduction">
+            <div class="home-system-line">
+              <span>SL / System introduction</span>
+              <span>Portfolio 0.1.7</span>
+            </div>
+
+            <p class="home-kicker">Information Technology · York University</p>
+            <h1>
+              Complex systems.
+              <span>Clear interfaces.</span>
+            </h1>
+            <p class="home-summary">
+              I am Songang Li, an Information Technology student in Toronto. I design and build
+              interfaces that make websites, software tools, and technical systems easier to
+              understand.
+            </p>
+
+            <div class="home-actions">
+              <a class="home-action-primary" href="#selected-work">
+                Enter project archive <span aria-hidden="true">↓</span>
+              </a>
+              <a class="home-action-secondary" href="contact.html">
+                Open contact channel <span aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <dl class="home-readout" aria-label="Profile overview">
+              <div>
+                <dt>Location</dt>
+                <dd>Toronto, Canada</dd>
+              </div>
+              <div>
+                <dt>Program</dt>
+                <dd>Information Technology</dd>
+              </div>
+              <div>
+                <dt>Status</dt>
+                <dd><span class="status-dot" aria-hidden="true"></span> Open to 2027 opportunities</dd>
+              </div>
+            </dl>
+          </div>
+
+          <figure class="home-portrait-module">
+            <div class="portrait-module-header" aria-hidden="true">
+              <span>PROFILE / VISUAL-01</span>
+              <span>FOCUS LOCKED</span>
+            </div>
+            <div class="portrait-viewport">
+              <img
+                src="materials/songangLiPhoto.jpg"
+                alt="Songang Li studying at a library"
+              >
+              <span class="portrait-crosshair" aria-hidden="true"></span>
+              <span class="portrait-calibration portrait-calibration-left" aria-hidden="true"></span>
+              <span class="portrait-calibration portrait-calibration-right" aria-hidden="true"></span>
+            </div>
+            <figcaption>
+              <span>
+                <strong>Songang Li</strong>
+                <small>Information Technology student</small>
+              </span>
+              <span class="portrait-index" aria-hidden="true">00 / 06</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <a class="home-scroll-cue" href="#operating-principle">
+          <span>Continue to operating principle</span>
+          <span aria-hidden="true">↓</span>
+        </a>
+      </section>
+
+      <section id="operating-principle" class="home-principle">
+        <div class="home-principle-index" aria-hidden="true">
+          <span>00</span>
+          <small>Core directive</small>
+        </div>
+
+        <div class="home-principle-copy">
+          <p class="eyebrow">Operating principle</p>
+          <h2>I turn complex systems into interfaces people can understand.</h2>
+          <p>
+            My work moves between visual design and technical implementation. I start by finding
+            the real problem, build the smallest useful structure, and refine it through testing
+            instead of decoration alone.
           </p>
 
-          <div class="mt-9 flex flex-wrap gap-3">
-            <a class="button-primary" href="#selected-work">View selected work <span aria-hidden="true">↓</span></a>
+          <ol class="home-method" aria-label="Working method">
+            <li>
+              <span>01</span>
+              <strong>Frame</strong>
+              <small>Define the problem and boundaries.</small>
+            </li>
+            <li>
+              <span>02</span>
+              <strong>Build</strong>
+              <small>Create a working interface early.</small>
+            </li>
+            <li>
+              <span>03</span>
+              <strong>Verify</strong>
+              <small>Test, review, and document decisions.</small>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="selected-work" class="home-work">
+        <div class="home-section-heading">
+          <div>
+            <p class="eyebrow">Selected systems</p>
+            <h2>Three projects.<br>Different operating conditions.</h2>
+          </div>
+          <div>
+            <p>
+              Commercial websites and an independent interface system, each shaped by a different
+              audience, delivery context, and technical boundary.
+            </p>
+            <a class="project-link" href="projects.html">
+              Open all case files <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+
+        <article class="home-featured-project">
+          <figure class="featured-project-media">
+            <img
+              src="materials/vectorPathHudPanelScreenshot.png"
+              alt="VectorPath HUD navigation panel displayed inside a Space Engineers cockpit"
+            >
+            <figcaption>
+              <span>Live system capture</span>
+              <span>HUD / CONTROL PANEL</span>
+            </figcaption>
+          </figure>
+
+          <div class="featured-project-content">
+            <div class="featured-project-status">
+              <span>PROJECT / 03</span>
+              <span><i aria-hidden="true"></i> Active development</span>
+            </div>
+            <p class="home-project-type">Navigation interface · C#</p>
+            <h3>VectorPath HUD</h3>
+            <p>
+              A manual-piloting navigation aid for Space Engineers that converts live ship and
+              route data into readable cockpit guidance without taking control away from the
+              player.
+            </p>
+            <dl class="featured-project-facts">
+              <div>
+                <dt>Role</dt>
+                <dd>Creator / Designer / Developer</dd>
+              </div>
+              <div>
+                <dt>Access</dt>
+                <dd>Public prototype / Private main build</dd>
+              </div>
+            </dl>
             <a
-              class="button-secondary"
-              href="https://github.com/seven2303779642-lab"
+              class="home-project-action"
+              href="https://github.com/seven2303779642-lab/VectorPath-Prototype/tree/main"
               target="_blank"
               rel="noreferrer"
             >
-              GitHub profile <span aria-hidden="true">↗</span>
+              View prototype repository <span aria-hidden="true">↗</span>
             </a>
           </div>
+        </article>
 
-          <dl class="mt-12 grid max-w-2xl grid-cols-2 gap-px overflow-hidden border border-[#171214]/15 bg-[#171214]/15 sm:grid-cols-3">
-            <div class="bg-stone-50 p-4">
-              <dt class="text-xs uppercase tracking-[0.16em] text-[#7A7289]">Based in</dt>
-              <dd class="mt-2 text-sm font-medium">Toronto, Canada</dd>
-            </div>
-            <div class="bg-stone-50 p-4">
-              <dt class="text-xs uppercase tracking-[0.16em] text-[#7A7289]">Program</dt>
-              <dd class="mt-2 text-sm font-medium">Information Technology</dd>
-            </div>
-            <div class="col-span-2 bg-stone-50 p-4 sm:col-span-1">
-              <dt class="text-xs uppercase tracking-[0.16em] text-[#7A7289]">Graduating</dt>
-              <dd class="mt-2 text-sm font-medium">Expected 2027</dd>
-            </div>
-          </dl>
-        </div>
-
-        <figure class="portrait-frame mx-auto w-full max-w-md lg:justify-self-end">
-          <div class="portrait-offset" aria-hidden="true"></div>
-          <img
-            class="relative z-10 aspect-[4/5] w-full object-cover object-[50%_42%]"
-            src="materials/songangLiPhoto.jpg"
-            alt="Songang Li studying at a library"
-          >
-          <figcaption class="relative z-10 flex items-center justify-between border-t border-slate-950 bg-white px-4 py-3 text-xs">
-            <span>York University, Toronto</span>
-            <span class="inline-flex items-center gap-2 text-[#734051]">
-              <span class="status-dot" aria-hidden="true"></span>
-              Open to opportunities
-            </span>
-          </figcaption>
-        </figure>
-      </section>
-
-      <section class="border-y border-[#171214] bg-[#171214] text-white">
-        <div class="mx-auto grid max-w-7xl gap-6 px-5 py-10 sm:px-8 md:grid-cols-[0.7fr_1.3fr] lg:px-12">
-          <p class="text-sm font-medium uppercase tracking-[0.2em] text-[#D4A85D]">How I work</p>
-          <p class="max-w-3xl text-2xl leading-snug tracking-tight text-[#F3E5DC] sm:text-3xl">
-            I learn by building, testing, and refining practical ideas until the interface feels
-            understandable and the product does what it promises.
-          </p>
-        </div>
-      </section>
-
-      <section id="selected-work" class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
-        <div class="flex flex-col gap-5 border-b border-[#171214]/20 pb-7 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p class="eyebrow">Selected work</p>
-            <h2 class="mt-4 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">Projects with different problems.</h2>
-          </div>
-          <div class="max-w-md">
-            <p class="text-sm leading-6 text-[#734051]">
-              A selection of commercial web work and independent software projects, with fuller
-              context available in the project archive.
-            </p>
-            <a class="project-link mt-3" href="projects.html">
-              Open project archive <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="mt-8 grid gap-6 lg:grid-cols-3">
-          <article class="project-card">
-            <div class="project-media bg-[#c9413d]">
+        <div class="home-project-pair">
+          <article class="home-project-record">
+            <figure>
               <img
                 src="materials/yunshangScreenshot.png"
                 alt="Yunshang Rice Noodle website home page"
               >
-            </div>
-            <div class="flex flex-1 flex-col p-6">
-              <p class="project-number">01 · Restaurant website</p>
-              <h3 class="mt-3 text-2xl font-semibold tracking-tight">Yunshang Rice Noodle</h3>
-              <p class="mt-3 text-sm leading-6 text-[#734051]">
-                A responsive restaurant website shaped around brand storytelling, menu discovery,
-                locations, and online ordering.
+              <figcaption>Production website · Responsive bilingual delivery</figcaption>
+            </figure>
+            <div>
+              <div class="record-heading">
+                <span>PROJECT / 01</span>
+                <span>LIVE</span>
+              </div>
+              <p class="home-project-type">Restaurant website · Next.js</p>
+              <h3>Yunshang Rice Noodle</h3>
+              <p>
+                A bilingual restaurant website organized around brand storytelling, menu
+                discovery, locations, events, and online ordering.
               </p>
               <a
-                class="project-link mt-6"
+                class="home-project-action"
                 href="https://www.yunshang.ca/"
                 target="_blank"
                 rel="noreferrer"
               >
-                Visit live site <span aria-hidden="true">↗</span>
+                Open live website <span aria-hidden="true">↗</span>
               </a>
             </div>
           </article>
 
-          <article class="project-card">
-            <div class="project-media bg-black">
+          <article class="home-project-record">
+            <figure>
               <img
-                src="materials/smmeScreenshot.png"
-                alt="SMM Entertainment landing page with blue and purple neon lighting"
+                src="materials/smmeStageScreenshot.png"
+                alt="SMM Entertainment landing page showing a cinematic production stage"
               >
-            </div>
-            <div class="flex flex-1 flex-col p-6">
-              <p class="project-number">02 · Entertainment landing page</p>
-              <h3 class="mt-3 text-2xl font-semibold tracking-tight">SMM Entertainment</h3>
-              <p class="mt-3 text-sm leading-6 text-[#734051]">
-                A cinematic, full-page landing experience using strong scene changes, typography,
-                and motion-led visual direction.
+              <figcaption>Personal Vercel preview · Original delivered build</figcaption>
+            </figure>
+            <div>
+              <div class="record-heading">
+                <span>PROJECT / 02</span>
+                <span>DEMO</span>
+              </div>
+              <p class="home-project-type">Entertainment landing page · Next.js</p>
+              <h3>SMM Entertainment</h3>
+              <p>
+                A cinematic full-page experience built around numbered scenes, controlled
+                navigation, responsive assets, and motion-led visual direction.
               </p>
               <a
-                class="project-link mt-6"
+                class="home-project-action"
                 href="https://smme-landing-page.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
               >
-                View my version <span aria-hidden="true">↗</span>
+                Open live demo <span aria-hidden="true">↗</span>
               </a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-media bg-[#171214]">
-              <img
-                src="materials/vectorPathHudScreenshot.png"
-                alt="VectorPath HUD navigation interface inside Space Engineers"
-              >
-            </div>
-            <div class="flex flex-1 flex-col p-6">
-              <p class="project-number">03 · Game interface modification</p>
-              <h3 class="mt-3 text-2xl font-semibold tracking-tight">VectorPath HUD</h3>
-              <p class="mt-3 text-sm leading-6 text-[#734051]">
-                An information-dense navigation and telemetry interface designed for Space Engineers.
-                The development repository is currently private.
-              </p>
-              <span class="project-link mt-6 text-[#7A7289]">
-                Public release planned
-              </span>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="brand-band border-t border-[#171214]/15 text-white">
-        <div class="mx-auto grid max-w-7xl gap-8 px-5 py-14 sm:px-8 md:grid-cols-[1fr_auto] md:items-center lg:px-12">
-          <div>
-            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#F0B7CC]">Currently learning</p>
-            <h2 class="mt-3 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">
-              Advanced JavaScript, TypeScript, data analytics, and applied AI workflows.
-            </h2>
-          </div>
-          <a
-            class="button-on-primary"
-            href="https://www.linkedin.com/in/seven-li-569506422/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Connect on LinkedIn <span aria-hidden="true">↗</span>
-          </a>
+      <section class="home-current-vector">
+        <div class="current-vector-index" aria-hidden="true">→</div>
+        <div>
+          <p>Current vector</p>
+          <h2>Learning, building, and preparing for the next opportunity.</h2>
         </div>
+        <dl>
+          <div>
+            <dt>Learning</dt>
+            <dd>Advanced JavaScript, TypeScript, data analytics, and applied AI</dd>
+          </div>
+          <div>
+            <dt>Graduation</dt>
+            <dd>Expected 2027 · York University</dd>
+          </div>
+        </dl>
+        <a class="home-vector-action" href="contact.html">
+          Start a conversation <span aria-hidden="true">→</span>
+        </a>
       </section>
     </main>
 
