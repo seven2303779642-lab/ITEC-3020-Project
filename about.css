@@ -140,96 +140,6 @@
   text-transform: uppercase;
 }
 
-.celestial-grid {
-  /* Dark technical section with coordinate grid, orbit glow, and readout labels. */
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-}
-
-.celestial-grid::before {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  background-image:
-    linear-gradient(rgba(167, 196, 203, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(167, 196, 203, 0.055) 1px, transparent 1px),
-    radial-gradient(circle at 14% 110%, rgba(169, 31, 80, 0.3), transparent 34%);
-  background-size:
-    36px 36px,
-    36px 36px,
-    auto;
-  content: "";
-}
-
-.celestial-grid::after {
-  /* Oversized off-canvas rings keep the background atmospheric but restrained. */
-  position: absolute;
-  right: -10rem;
-  bottom: -19rem;
-  z-index: -1;
-  width: 36rem;
-  height: 36rem;
-  border: 1px solid rgba(212, 168, 93, 0.2);
-  border-radius: 50%;
-  box-shadow:
-    0 0 0 4rem rgba(95, 41, 111, 0.06),
-    0 0 0 8rem rgba(169, 31, 80, 0.035);
-  content: "";
-}
-
-.celestial-coordinate {
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  margin: 0;
-  font-size: 0.58rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(167, 196, 203, 0.72);
-}
-
-.timeline-marker {
-  /* Shared education timeline: circle is the event, line continues downward. */
-  position: relative;
-  padding-left: 1.75rem;
-}
-
-.timeline-marker::after {
-  position: absolute;
-  top: 1.2rem;
-  bottom: 0;
-  left: 0.31rem;
-  width: 1px;
-  background: linear-gradient(var(--gold), rgba(212, 168, 93, 0.08));
-  content: "";
-}
-
-.timeline-marker::before {
-  position: absolute;
-  top: 0.4rem;
-  left: 0;
-  width: 0.7rem;
-  height: 0.7rem;
-  border: 2px solid var(--accent);
-  border-radius: 999px;
-  background: var(--page);
-  content: "";
-}
-
-.calibrated-timeline {
-  /* Small bottom ticks make the education record read like an instrument scale. */
-  background-image: repeating-linear-gradient(
-    90deg,
-    rgba(212, 168, 93, 0.42) 0 1px,
-    transparent 1px 3rem
-  );
-  background-position: left bottom;
-  background-repeat: repeat-x;
-  background-size: auto 0.35rem;
-}
-
 .skill-list {
   display: flex;
   flex-wrap: wrap;
@@ -241,7 +151,7 @@
 
 .skill-list li {
   border: 1px solid var(--line);
-  background: white;
+  background: var(--paper);
   padding: 0.55rem 0.75rem;
   font-size: 0.8rem;
   font-weight: 600;
@@ -252,7 +162,7 @@
   min-height: 9rem;
   overflow: hidden;
   border: 1px solid var(--ink);
-  background: white;
+  background: var(--paper);
   padding: 1.25rem;
   transition:
     transform 180ms ease,
@@ -288,7 +198,7 @@
 .interest-card:hover {
   transform: translateY(-3px);
   background: var(--surface-dark);
-  color: #f3e5dc;
+  color: var(--warm-text);
 }
 
 .interest-card:hover::before {
