@@ -28,9 +28,13 @@
 }
 
 :root {
-  /* Shared light-theme tokens. A future dark theme can override these values. */
+  /* Shared palette for the light editorial surfaces and dark system panels. */
   --page: #fbf7f8;
   --ink: #171214;
+  --void: #0d0405;
+  --paper: #ffffff;
+  --warm-text: #f3e5dc;
+  --body-copy: #4b424d;
   --surface-dark: #3d2b34;
   --muted: #734051;
   --accent: #a91f50;
@@ -59,6 +63,17 @@ body {
   font-family:
     "Space Grotesk", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
+}
+
+body > header {
+  position: relative;
+  z-index: 20;
+  background: rgba(251, 247, 248, 0.92);
+}
+
+body > footer {
+  border-top: 1px solid var(--line);
+  background: var(--page);
 }
 
 img {
@@ -96,7 +111,7 @@ a {
   z-index: 100;
   transform: translateY(-200%);
   border: 2px solid var(--ink);
-  background: white;
+  background: var(--paper);
   padding: 0.65rem 1rem;
   font-size: 0.875rem;
   font-weight: 700;
@@ -134,7 +149,7 @@ a {
   align-items: center;
   padding: 0 0.7rem;
   border: 1px solid transparent;
-  color: #475569;
+  color: var(--muted);
   text-decoration: none;
   transition:
     border-color 160ms ease,
@@ -164,7 +179,7 @@ a {
 
 .nav-link-disabled:hover {
   border-color: transparent;
-  color: #475569;
+  color: var(--muted);
 }
 
 .eyebrow {
@@ -173,6 +188,16 @@ a {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--accent);
+}
+
+.status-dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 0.28rem rgba(212, 168, 93, 0.14);
 }
 
 .button-primary,
@@ -213,18 +238,153 @@ a {
 }
 
 .button-secondary:hover {
-  background: white;
+  background: var(--paper);
 }
 
 .button-on-primary {
   border-color: white;
-  background: white;
+  background: var(--paper);
   color: var(--accent-dark);
 }
 
 .brand-band {
   background: var(--accent);
 }
+
+/* Shared inline action used by project records, editorial notes, and summaries. */
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.2rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    color 160ms ease,
+    border-color 160ms ease;
+}
+
+a.project-link:hover {
+  color: var(--accent);
+}
+
+.project-number {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Shared dark technical field used by About, Resume, and Projects. */
+.celestial-grid {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.celestial-grid::before {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image:
+    linear-gradient(rgba(167, 196, 203, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(167, 196, 203, 0.055) 1px, transparent 1px),
+    radial-gradient(circle at 14% 110%, rgba(169, 31, 80, 0.3), transparent 34%);
+  background-size:
+    36px 36px,
+    36px 36px,
+    auto;
+  content: "";
+}
+
+.celestial-grid::after {
+  position: absolute;
+  right: -10rem;
+  bottom: -19rem;
+  z-index: -1;
+  width: 36rem;
+  height: 36rem;
+  border: 1px solid rgba(212, 168, 93, 0.2);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 4rem rgba(95, 41, 111, 0.06),
+    0 0 0 8rem rgba(169, 31, 80, 0.035);
+  content: "";
+}
+
+.celestial-coordinate {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 1;
+  margin: 0;
+  color: rgba(167, 196, 203, 0.72);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* Shared education record used by both the About and Resume pages. */
+.timeline-marker {
+  position: relative;
+  padding-left: 1.75rem;
+}
+
+.timeline-marker::after {
+  position: absolute;
+  top: 1.2rem;
+  bottom: 0;
+  left: 0.31rem;
+  width: 1px;
+  background: linear-gradient(var(--gold), rgba(212, 168, 93, 0.08));
+  content: "";
+}
+
+.timeline-marker::before {
+  position: absolute;
+  top: 0.4rem;
+  left: 0;
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  background: var(--page);
+  content: "";
+}
+
+.calibrated-timeline {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(212, 168, 93, 0.42) 0 1px,
+    transparent 1px 3rem
+  );
+  background-position: left bottom;
+  background-repeat: repeat-x;
+  background-size: auto 0.35rem;
+}
+
+.footer-link {
+  text-decoration-color: transparent;
+  text-underline-offset: 0.25rem;
+  transition:
+    color 160ms ease,
+    text-decoration-color 160ms ease;
+}
+
+.footer-link:hover,
+.footer-link[aria-current="page"] {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+}
+
 /* ==========================================================================
    2. Shared responsive and accessibility rules
    ========================================================================== */

@@ -70,7 +70,7 @@
 
 .blog-editorial-intro p {
   margin: 0;
-  color: #4b424d;
+  color: var(--body-copy);
   font-size: 1rem;
   line-height: 1.75;
 }
@@ -138,7 +138,7 @@
 .blog-featured-summary {
   margin: 1.75rem 0 0;
   max-width: 43rem;
-  color: #4b424d;
+  color: var(--body-copy);
   font-size: 1.15rem;
   line-height: 1.75;
 }
@@ -148,7 +148,7 @@
   max-width: 43rem;
   border-left: 2px solid var(--gold);
   padding-left: 1rem;
-  color: #4b424d;
+  color: var(--body-copy);
   font-size: 0.88rem;
   line-height: 1.7;
 }
@@ -202,7 +202,7 @@
 .blog-post-template-summary {
   margin: 1.75rem 0 0;
   max-width: 42rem;
-  color: #4b424d;
+  color: var(--body-copy);
   font-size: 1.15rem;
   line-height: 1.75;
 }
@@ -259,7 +259,7 @@
 .blog-writing-reminder ol {
   margin: 1.25rem 0 0;
   padding-left: 1.2rem;
-  color: #4b424d;
+  color: var(--body-copy);
   font-size: 0.88rem;
   line-height: 1.65;
 }
@@ -297,7 +297,7 @@
 
 .blog-post-template-body section > p:last-child {
   margin: 1.25rem 0 0;
-  color: #4b424d;
+  color: var(--body-copy);
   line-height: 1.8;
 }
 
@@ -391,7 +391,7 @@
   align-self: end;
   margin: 0;
   max-width: 35rem;
-  color: #4b424d;
+  color: var(--body-copy);
   line-height: 1.7;
 }
 
@@ -433,7 +433,7 @@
 .blog-archive-entry > div > p:last-of-type {
   margin: 0.9rem 0 0;
   max-width: 46rem;
-  color: #4b424d;
+  color: var(--body-copy);
   line-height: 1.65;
 }
 

@@ -10,13 +10,13 @@
     radial-gradient(circle at 82% 12%, rgba(169, 31, 80, 0.2), transparent 24rem),
     linear-gradient(rgba(167, 196, 203, 0.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(167, 196, 203, 0.04) 1px, transparent 1px),
-    #0d0405;
+    var(--void);
   background-size:
     auto,
     48px 48px,
     48px 48px,
     auto;
-  color: #f3e5dc;
+  color: var(--warm-text);
 }
 
 .contact-hero::before {
@@ -40,7 +40,7 @@
   right: 9.25rem;
   width: 0.65rem;
   height: 0.65rem;
-  border: 2px solid #0d0405;
+  border: 2px solid var(--void);
   border-radius: 50%;
   background: var(--gold);
   box-shadow: 0 0 0 1px var(--gold);
@@ -165,7 +165,7 @@
   border-right: 1px solid rgba(212, 168, 93, 0.5);
   background:
     linear-gradient(145deg, rgba(169, 31, 80, 0.16), transparent 44%),
-    #171214;
+    var(--ink);
 }
 
 .contact-directory h2,
@@ -319,7 +319,7 @@
   padding: 2.5rem clamp(1.5rem, 4vw, 4rem) 3rem;
   background:
     linear-gradient(rgba(23, 18, 20, 0.025) 1px, transparent 1px),
-    #fbf7f8;
+    var(--page);
   background-size: 100% 3.75rem;
   color: var(--ink);
 }
@@ -409,7 +409,7 @@
 .contact-field textarea:focus {
   border-color: var(--accent);
   outline: 0;
-  background: white;
+  background: var(--paper);
   box-shadow: 4px 4px 0 rgba(169, 31, 80, 0.14);
 }
 
@@ -438,7 +438,7 @@
   justify-content: center;
   border: 1px solid rgba(23, 18, 20, 0.38);
   background: rgba(255, 255, 255, 0.58);
-  color: #4b424d;
+  color: var(--body-copy);
   font-size: 0.72rem;
   letter-spacing: 0.06em;
   text-transform: none;

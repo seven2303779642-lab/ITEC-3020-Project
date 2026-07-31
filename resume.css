@@ -57,7 +57,7 @@
     var(--ink);
   background-size: 24px 24px;
   padding: 2rem;
-  color: #f3e5dc;
+  color: var(--warm-text);
 }
 
 .resume-console-index span {
@@ -117,7 +117,7 @@
   min-height: 11rem;
   overflow: hidden;
   border: 1px solid var(--ink);
-  background: white;
+  background: var(--paper);
   padding: 2.4rem 1.5rem 1.5rem;
   clip-path: polygon(0 0, calc(100% - 1.25rem) 0, 100% 1.25rem, 100% 100%, 0 100%);
 }
@@ -153,7 +153,7 @@
 
 .resume-skill-panel p {
   margin: 0.85rem 0 0;
-  color: #4b424d;
+  color: var(--body-copy);
   line-height: 1.7;
 }
 
@@ -227,7 +227,7 @@
 .resume-entry h3 + p {
   margin: 0.85rem 0 0;
   max-width: 48rem;
-  color: #4b424d;
+  color: var(--body-copy);
   line-height: 1.75;
 }
 
@@ -272,7 +272,7 @@
 
 .resume-more-projects-note {
   margin: 0.7rem 0 0;
-  color: #4b424d;
+  color: var(--body-copy);
   line-height: 1.7;
 }
 
@@ -285,7 +285,7 @@
   background:
     linear-gradient(rgba(23, 18, 20, 0.025) 1px, transparent 1px),
     linear-gradient(90deg, rgba(23, 18, 20, 0.025) 1px, transparent 1px),
-    #fbf7f8;
+    var(--page);
   background-size: 32px 32px;
 }
 
@@ -312,7 +312,7 @@
 
 .resume-document-heading p:last-child {
   margin: 1rem 0 0;
-  color: #4b424d;
+  color: var(--body-copy);
   line-height: 1.7;
 }
 
@@ -322,7 +322,7 @@
   min-height: 36rem;
   margin: 2rem auto 0;
   border: 1px solid var(--ink);
-  background: white;
+  background: var(--paper);
   box-shadow: 0.75rem 0.75rem 0 rgba(169, 31, 80, 0.14);
 }
 
