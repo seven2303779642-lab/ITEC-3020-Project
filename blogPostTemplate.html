@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="A reusable writing template for Songang Li's development notes."
+    >
+    <title>Post Template | Songang Li</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="blog.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body class="site-shell min-h-screen text-[#171214] antialiased">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="border-b border-[#171214]/15 bg-stone-50/90 backdrop-blur">
+      <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-5 sm:px-8 lg:px-12">
+        <a class="group inline-flex items-center gap-3" href="index.html" aria-label="Songang Li home">
+          <span class="brand-mark" aria-hidden="true">SL</span>
+          <span>
+            <span class="block text-sm font-semibold tracking-tight">Songang Li</span>
+            <span class="block text-xs text-[#734051]">IT student · Toronto</span>
+          </span>
+        </a>
+
+        <nav aria-label="Primary navigation">
+          <ul class="flex flex-wrap items-center justify-end gap-x-1 gap-y-2 text-sm">
+            <li><a class="nav-link" href="index.html">Home</a></li>
+            <li><a class="nav-link" href="about.html">About</a></li>
+            <li><a class="nav-link" href="resume.html">Resume</a></li>
+            <li><a class="nav-link" href="projects.html">Projects</a></li>
+            <li><a class="nav-link nav-link-active" href="blog.html" aria-current="page">Blog</a></li>
+            <li><span class="nav-link nav-link-disabled" aria-disabled="true" title="Planned for version 0.1.5">Contact</span></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <article class="blog-post-template-page">
+        <header class="blog-post-template-header border-b border-[#171214]">
+          <div class="mx-auto max-w-5xl px-5 py-12 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
+            <a class="project-link" href="blog.html">
+              <span aria-hidden="true">←</span> Back to build memo
+            </a>
+
+            <p class="eyebrow mt-12">Writing template · Personal draft</p>
+            <h1>Not edited</h1>
+            <p class="blog-post-template-summary">Not edited</p>
+
+            <dl class="blog-post-template-meta">
+              <div><dt>Date</dt><dd>Not edited</dd></div>
+              <div><dt>Category</dt><dd>Not edited</dd></div>
+              <div><dt>Entry</dt><dd>Not edited</dd></div>
+              <div><dt>Status</dt><dd>Not edited</dd></div>
+            </dl>
+          </div>
+        </header>
+
+        <div class="mx-auto grid max-w-5xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[0.7fr_1.3fr] lg:px-12 lg:py-24">
+          <aside class="blog-writing-reminder" aria-labelledby="writing-reminder-title">
+            <p class="eyebrow">Note to self</p>
+            <h2 id="writing-reminder-title">Write what actually happened.</h2>
+            <ol>
+              <li>Describe the real feature, not the intended marketing result.</li>
+              <li>Record the implementation steps in the order I tried them.</li>
+              <li>Include at least one mistake, limitation, or failed attempt.</li>
+              <li>Finish with what I learned and what still needs testing.</li>
+            </ol>
+          </aside>
+
+          <div class="blog-post-template-body">
+            <section aria-labelledby="feature-description-title">
+              <p class="blog-template-section-number">01</p>
+              <h2 id="feature-description-title">What the feature does</h2>
+              <p>Not edited</p>
+            </section>
+
+            <section aria-labelledby="implementation-approach-title">
+              <p class="blog-template-section-number">02</p>
+              <h2 id="implementation-approach-title">How I approached it</h2>
+              <p>Not edited</p>
+            </section>
+
+            <section aria-labelledby="implementation-challenges-title">
+              <p class="blog-template-section-number">03</p>
+              <h2 id="implementation-challenges-title">Challenges I encountered</h2>
+              <p>Not edited</p>
+            </section>
+
+            <section aria-labelledby="lessons-learned-title">
+              <p class="blog-template-section-number">04</p>
+              <h2 id="lessons-learned-title">What I learned</h2>
+              <p>Not edited</p>
+            </section>
+          </div>
+        </div>
+
+        <section class="blog-evidence-check border-y border-[#171214]">
+          <div class="mx-auto max-w-5xl px-5 py-12 sm:px-8 lg:px-12">
+            <div>
+              <p class="eyebrow">Evidence checklist</p>
+              <h2>Add proof before marking the note complete.</h2>
+            </div>
+            <ul>
+              <li><span>Code reference</span><strong>Not edited</strong></li>
+              <li><span>Screenshot</span><strong>Not edited</strong></li>
+              <li><span>Test result</span><strong>Not edited</strong></li>
+              <li><span>Next action</span><strong>Not edited</strong></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="border-b border-[#171214]">
+          <div class="mx-auto flex max-w-5xl flex-col gap-6 px-5 py-12 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-12">
+            <div>
+              <p class="eyebrow">Draft control</p>
+              <h2 class="mt-2 text-3xl font-semibold tracking-tight">Return without inventing unfinished details.</h2>
+            </div>
+            <a class="button-primary" href="blog.html">
+              Back to memo <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="bg-stone-50">
+      <div class="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-8 text-sm text-[#734051] sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12">
+        <p>© 2026 Songang Li. Built for ITEC 3020.</p>
+        <div class="flex flex-wrap gap-5">
+          <a class="footer-link" href="index.html">Home</a>
+          <a class="footer-link" href="about.html">About</a>
+          <a class="footer-link" href="resume.html">Resume</a>
+          <a class="footer-link" href="projects.html">Projects</a>
+          <a class="footer-link" href="blog.html" aria-current="page">Blog</a>
+          <a class="footer-link" href="https://github.com/seven2303779642-lab" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="footer-link" href="https://www.linkedin.com/in/seven-li-569506422/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

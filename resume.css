@@ -1,0 +1,299 @@
+/* ==========================================================================
+   4. Resume page
+   ========================================================================== */
+
+.resume-hero {
+  /* Keeps the large orbit decoration inside the Resume hero. */
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.resume-hero::before {
+  /* Decorative orbit system; intentionally placed mostly outside the viewport. */
+  position: absolute;
+  top: -22rem;
+  right: -16rem;
+  z-index: -1;
+  width: 46rem;
+  height: 46rem;
+  border: 1px solid rgba(169, 31, 80, 0.28);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 5rem rgba(95, 41, 111, 0.035),
+    0 0 0 10rem rgba(212, 168, 93, 0.025);
+  content: "";
+}
+
+.resume-console {
+  /* Resume status console: dark index header above a four-row definition list. */
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--ink);
+  background: rgba(255, 255, 255, 0.72);
+  clip-path: polygon(0 0, calc(100% - 2rem) 0, 100% 2rem, 100% 100%, 0 100%);
+}
+
+.resume-console::after {
+  /* One-pixel diagonal stroke visually closes the clipped top-right corner. */
+  position: absolute;
+  top: 0.6rem;
+  right: -0.35rem;
+  width: 2.8rem;
+  height: 1px;
+  background: var(--gold);
+  content: "";
+  transform: rotate(45deg);
+}
+
+.resume-console-index {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--ink);
+  background:
+    linear-gradient(rgba(167, 196, 203, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(167, 196, 203, 0.06) 1px, transparent 1px),
+    var(--ink);
+  background-size: 24px 24px;
+  padding: 2rem;
+  color: #f3e5dc;
+}
+
+.resume-console-index span {
+  font-size: clamp(4.5rem, 12vw, 7rem);
+  font-weight: 600;
+  line-height: 0.78;
+  letter-spacing: -0.08em;
+  color: var(--highlight);
+}
+
+.resume-console-index small {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cold-highlight);
+}
+
+.resume-console dl {
+  margin: 0;
+  padding: 0 2rem;
+}
+
+.resume-console dl > div {
+  display: grid;
+  grid-template-columns: 5.25rem 1fr;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid var(--line);
+  padding: 0.85rem 0;
+}
+
+.resume-console dl > div:last-child {
+  border-bottom: 0;
+}
+
+.resume-console dt {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.resume-console dd {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.resume-skill-panel {
+  /* Reusable cut-corner skill module. data-panel supplies its small system code. */
+  position: relative;
+  min-height: 11rem;
+  overflow: hidden;
+  border: 1px solid var(--ink);
+  background: white;
+  padding: 2.4rem 1.5rem 1.5rem;
+  clip-path: polygon(0 0, calc(100% - 1.25rem) 0, 100% 1.25rem, 100% 100%, 0 100%);
+}
+
+.resume-skill-panel::before {
+  position: absolute;
+  top: 0.75rem;
+  right: 1.75rem;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  content: attr(data-panel);
+}
+
+.resume-skill-panel::after {
+  /* Calibration rail shared by the Resume skill modules. */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--accent), transparent 85%);
+  content: "";
+}
+
+.resume-skill-panel h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.resume-skill-panel p {
+  margin: 0.85rem 0 0;
+  color: #4b424d;
+  line-height: 1.7;
+}
+
+.resume-timeline {
+  /* Chronological project line: Viva → Yunshang → SMME → future records. */
+  position: relative;
+}
+
+.resume-timeline::before {
+  position: absolute;
+  top: 0.75rem;
+  bottom: 0.75rem;
+  left: 0.34rem;
+  width: 1px;
+  background: linear-gradient(var(--accent), var(--gold), rgba(212, 168, 93, 0.12));
+  content: "";
+}
+
+.resume-entry {
+  position: relative;
+  display: grid;
+  gap: 1.5rem;
+  border-bottom: 1px solid var(--line);
+  padding: 0 0 2.5rem 2.4rem;
+}
+
+.resume-entry + .resume-entry {
+  padding-top: 2.5rem;
+}
+
+.resume-entry::before {
+  /* Circular event marker anchored to the project timeline. */
+  position: absolute;
+  top: 0.4rem;
+  left: 0;
+  width: 0.72rem;
+  height: 0.72rem;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  background: var(--page);
+  content: "";
+}
+
+.resume-entry + .resume-entry::before {
+  top: 2.9rem;
+}
+
+.resume-entry-meta p {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.resume-entry-meta span {
+  display: block;
+  margin-top: 0.45rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.resume-entry h3 {
+  margin: 0.6rem 0 0;
+  font-size: 1.5rem;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+}
+
+.resume-entry h3 + p {
+  margin: 0.85rem 0 0;
+  max-width: 48rem;
+  color: #4b424d;
+  line-height: 1.75;
+}
+
+.resume-more-projects {
+  /* Resume-to-Projects continuation link, styled as the timeline's open record. */
+  position: relative;
+  display: grid;
+  gap: 1.5rem;
+  padding: 2.5rem 0 0 2.4rem;
+  text-decoration: none;
+}
+
+.resume-more-projects::before {
+  /* Diamond marker distinguishes the open-ended archive from completed entries. */
+  position: absolute;
+  top: 2.9rem;
+  left: 0.1rem;
+  width: 0.52rem;
+  height: 0.52rem;
+  border: 1px solid var(--accent);
+  background: var(--gold);
+  content: "";
+  transform: rotate(45deg);
+}
+
+.resume-more-projects-meta {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.resume-more-projects-title {
+  margin: 0.55rem 0 0;
+  font-size: 1.5rem;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+  transition: color 160ms ease;
+}
+
+.resume-more-projects-note {
+  margin: 0.7rem 0 0;
+  color: #4b424d;
+  line-height: 1.7;
+}
+
+.resume-more-projects:hover .resume-more-projects-title {
+  color: var(--accent);
+}
+/* Resume-specific responsive rules. */
+@media (min-width: 768px) {
+  .resume-entry,
+  .resume-more-projects {
+    grid-template-columns: 11rem 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .resume-console dl {
+    padding-inline: 1.25rem;
+  }
+
+  .resume-console-index {
+    padding: 1.5rem 1.25rem;
+  }
+}
