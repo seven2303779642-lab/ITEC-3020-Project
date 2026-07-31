@@ -10,34 +10,25 @@
     <title>Contact | Songang Li</title>
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="contact.css">
+    <style>
+      /* Page-level focus treatment demonstrates meaningful internal CSS. */
+      .contact-field input[type="text"]:focus,
+      .contact-field input[type="email"]:focus,
+      .contact-field textarea:focus {
+        border-color: var(--accent);
+        outline: 0;
+        background: var(--paper);
+        box-shadow: 4px 4px 0 rgba(169, 31, 80, 0.14);
+      }
+    </style>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="js/components.js" defer></script>
   </head>
 
-  <body class="site-shell min-h-screen text-[#171214] antialiased">
+  <body data-active-page="contact.html" class="site-shell min-h-screen text-[#171214] antialiased">
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <header class="border-b border-[#171214]/15 bg-stone-50/90 backdrop-blur">
-      <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-5 sm:px-8 lg:px-12">
-        <a class="group inline-flex items-center gap-3" href="index.html" aria-label="Songang Li home">
-          <span class="brand-mark" aria-hidden="true">SL</span>
-          <span>
-            <span class="block text-sm font-semibold tracking-tight">Songang Li</span>
-            <span class="block text-xs text-[#734051]">IT student · Toronto</span>
-          </span>
-        </a>
-
-        <nav aria-label="Primary navigation">
-          <ul class="flex flex-wrap items-center justify-end gap-x-1 gap-y-2 text-sm">
-            <li><a class="nav-link" href="index.html">Home</a></li>
-            <li><a class="nav-link" href="about.html">About</a></li>
-            <li><a class="nav-link" href="resume.html">Resume</a></li>
-            <li><a class="nav-link" href="projects.html">Projects</a></li>
-            <li><a class="nav-link" href="blog.html">Blog</a></li>
-            <li><a class="nav-link nav-link-active" href="contact.html" aria-current="page">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <div id="header-placeholder" data-component-placeholder="header"></div>
 
     <main id="main-content">
       <section class="contact-hero">
@@ -70,7 +61,7 @@
             </div>
             <div>
               <dt>Build</dt>
-              <dd>Portfolio 0.1.8</dd>
+              <dd>Portfolio 0.2.0</dd>
             </div>
           </dl>
         </div>
@@ -89,7 +80,7 @@
             <div class="channel-list">
               <a
                 class="channel-link"
-                href="https://www.linkedin.com/in/seven-li-569506422/"
+                href="https://www.linkedin.com/in/seven-li-569506422"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -224,20 +215,6 @@
       </section>
     </main>
 
-    <footer class="bg-stone-50">
-      <div class="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-8 text-sm text-[#734051] sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-12">
-        <p>© 2026 Songang Li. Built for ITEC 3020.</p>
-        <div class="flex flex-wrap gap-5">
-          <a class="footer-link" href="index.html">Home</a>
-          <a class="footer-link" href="about.html">About</a>
-          <a class="footer-link" href="resume.html">Resume</a>
-          <a class="footer-link" href="projects.html">Projects</a>
-          <a class="footer-link" href="blog.html">Blog</a>
-          <a class="footer-link" href="contact.html" aria-current="page">Contact</a>
-          <a class="footer-link" href="https://github.com/seven2303779642-lab" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="footer-link" href="https://www.linkedin.com/in/seven-li-569506422/" target="_blank" rel="noreferrer">LinkedIn</a>
-        </div>
-      </div>
-    </footer>
+    <div id="footer-placeholder" data-component-placeholder="footer"></div>
   </body>
 </html>
