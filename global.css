@@ -65,13 +65,13 @@ body {
     sans-serif;
 }
 
-body > header {
+#header-placeholder > header {
   position: relative;
   z-index: 20;
   background: rgba(251, 247, 248, 0.92);
 }
 
-body > footer {
+#footer-placeholder > footer {
   border-top: 1px solid var(--line);
   background: var(--page);
 }
@@ -102,6 +102,25 @@ a {
     linear-gradient(rgba(23, 18, 20, 0.025) 1px, transparent 1px),
     linear-gradient(90deg, rgba(23, 18, 20, 0.025) 1px, transparent 1px);
   background-size: 32px 32px;
+}
+
+#header-placeholder {
+  min-height: 5.1rem;
+}
+
+#footer-placeholder {
+  min-height: 5rem;
+}
+
+.component-load-error {
+  margin: 0;
+  border-block: 1px solid var(--crimson);
+  background: rgba(179, 10, 25, 0.08);
+  padding: 1rem;
+  color: var(--accent-dark);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 .skip-link {

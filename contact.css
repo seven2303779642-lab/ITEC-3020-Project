@@ -404,15 +404,6 @@
   color: #756870;
 }
 
-.contact-field input[type="text"]:focus,
-.contact-field input[type="email"]:focus,
-.contact-field textarea:focus {
-  border-color: var(--accent);
-  outline: 0;
-  background: var(--paper);
-  box-shadow: 4px 4px 0 rgba(169, 31, 80, 0.14);
-}
-
 .reason-options {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

@@ -124,7 +124,7 @@
 
 .home-introduction h1 span {
   display: block;
-  color: var(--highlight);
+  color: var(--hero-accent);
 }
 
 .home-summary {
