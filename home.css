@@ -166,7 +166,7 @@
 .home-action-primary {
   border-color: var(--highlight);
   background: var(--highlight);
-  color: var(--ink);
+  color: var(--fixed-ink);
 }
 
 .home-action-secondary {
@@ -181,7 +181,7 @@
 
 .home-action-secondary:hover {
   background: var(--warm-text);
-  color: var(--ink);
+  color: var(--fixed-ink);
 }
 
 .home-readout {
@@ -262,7 +262,7 @@
   position: relative;
   overflow: hidden;
   aspect-ratio: 4 / 5;
-  background: var(--ink);
+  background: var(--fixed-ink);
 }
 
 .portrait-viewport::after {
@@ -548,7 +548,7 @@
   grid-template-columns: minmax(0, 1.15fr) minmax(22rem, 0.85fr);
   margin-top: 2rem;
   border: 1px solid var(--ink);
-  background: var(--ink);
+  background: var(--fixed-ink);
   color: var(--warm-text);
 }
 
@@ -702,14 +702,14 @@
   grid-template-columns: minmax(0, 0.92fr) minmax(18rem, 1.08fr);
   min-width: 0;
   border: 1px solid var(--ink);
-  background: rgba(255, 255, 255, 0.68);
+  background: var(--theme-translucent-surface);
 }
 
 .home-project-record figure {
   min-width: 0;
   margin: 0;
   border-right: 1px solid var(--ink);
-  background: var(--ink);
+  background: var(--fixed-ink);
 }
 
 .home-project-record figure img {
@@ -759,7 +759,7 @@
   border: 1px solid var(--ink);
   background:
     linear-gradient(rgba(167, 196, 203, 0.05) 1px, transparent 1px),
-    var(--ink);
+    var(--fixed-ink);
   background-size: 100% 2.5rem;
   padding: 2.25rem;
   color: var(--warm-text);
@@ -838,7 +838,7 @@
 .home-vector-action:hover {
   transform: translate(-2px, -2px);
   background: var(--gold);
-  color: var(--ink);
+  color: var(--fixed-ink);
 }
 
 @media (max-width: 1180px) {

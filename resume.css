@@ -30,7 +30,7 @@
   position: relative;
   overflow: hidden;
   border: 1px solid var(--ink);
-  background: rgba(255, 255, 255, 0.72);
+  background: var(--theme-translucent-surface);
   clip-path: polygon(0 0, calc(100% - 2rem) 0, 100% 2rem, 100% 100%, 0 100%);
 }
 
@@ -54,7 +54,7 @@
   background:
     linear-gradient(rgba(167, 196, 203, 0.06) 1px, transparent 1px),
     linear-gradient(90deg, rgba(167, 196, 203, 0.06) 1px, transparent 1px),
-    var(--ink);
+    var(--fixed-ink);
   background-size: 24px 24px;
   padding: 2rem;
   color: var(--warm-text);
