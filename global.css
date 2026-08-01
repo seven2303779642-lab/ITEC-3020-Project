@@ -391,6 +391,93 @@ a.project-link:hover {
   text-transform: uppercase;
 }
 
+/* Shared search console used by the Projects and Blog record collections. */
+.content-filter {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 2rem;
+  border: 1px solid var(--theme-line);
+  background: var(--theme-translucent-surface);
+  padding: 1rem;
+}
+
+.content-filter-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+}
+
+.content-filter-heading label {
+  color: var(--accent);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.content-filter-heading span {
+  color: var(--theme-muted);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.content-filter-control {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  border-top: 1px solid var(--theme-line);
+}
+
+.content-filter-control > span {
+  padding: 0 0.8rem;
+  color: var(--gold);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.content-filter-control input {
+  min-width: 0;
+  min-height: 3.25rem;
+  border: 0;
+  border-left: 1px solid var(--theme-line);
+  border-radius: 0;
+  outline: 0;
+  background: transparent;
+  padding: 0.75rem 1rem;
+  color: var(--theme-text);
+  font: inherit;
+}
+
+.content-filter-control input::placeholder {
+  color: var(--theme-muted);
+  opacity: 0.82;
+}
+
+.content-filter-control:focus-within {
+  border-color: var(--focus);
+  box-shadow: 0 3px 0 rgba(212, 168, 93, 0.24);
+}
+
+.filter-no-results {
+  margin: 0;
+  border-left: 2px solid var(--accent);
+  background: rgba(169, 31, 80, 0.08);
+  padding: 0.85rem 1rem;
+  color: var(--theme-copy);
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+.filter-no-results[hidden],
+[data-filter-card][hidden] {
+  display: none !important;
+}
+
 /* Shared dark technical field used by About, Resume, and Projects. */
 .celestial-grid {
   position: relative;
@@ -566,6 +653,24 @@ a.project-link:hover {
     min-height: 1.8rem;
     padding-inline: 0.45rem;
     font-size: 0.62rem;
+  }
+
+  .content-filter-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .content-filter-control {
+    grid-template-columns: 1fr;
+  }
+
+  .content-filter-control > span {
+    padding: 0.65rem 0;
+  }
+
+  .content-filter-control input {
+    border-top: 1px solid var(--theme-line);
+    border-left: 0;
   }
 
   .celestial-coordinate {

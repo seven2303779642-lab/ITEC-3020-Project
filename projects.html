@@ -14,6 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="js/theme.js" defer></script>
     <script src="js/components.js" defer></script>
+    <script src="js/filter.js" defer></script>
   </head>
 
   <body data-active-page="projects.html" class="site-shell min-h-screen text-[#171214] antialiased">
@@ -94,8 +95,32 @@
           </p>
         </div>
 
-        <div class="case-file-list mt-10">
-          <article class="case-file" aria-labelledby="project-early-portfolio">
+        <div class="content-filter" role="search" aria-label="Filter project records">
+          <div class="content-filter-heading">
+            <label for="projects-filter">Search project records</label>
+            <span id="projects-filter-count" aria-live="polite">04 / 04 records visible</span>
+          </div>
+          <div class="content-filter-control">
+            <span aria-hidden="true">QUERY /</span>
+            <input
+              id="projects-filter"
+              type="search"
+              placeholder="Try Webflow, restaurant, entertainment, or HUD"
+              autocomplete="off"
+              aria-controls="projects-filter-results"
+              data-filter-input
+              data-filter-cards="#projects-filter-results [data-filter-card]"
+              data-filter-empty="projects-no-results"
+              data-filter-count="projects-filter-count"
+            >
+          </div>
+          <p id="projects-no-results" class="filter-no-results" role="status" hidden>
+            No project records match this search. Try a project name, category, or technology.
+          </p>
+        </div>
+
+        <div id="projects-filter-results" class="case-file-list mt-10">
+          <article class="case-file" aria-labelledby="project-early-portfolio" data-filter-card>
             <figure class="case-file-media">
               <div class="case-file-gallery">
                 <img
@@ -115,10 +140,10 @@
             <div class="case-file-content">
               <div class="case-file-heading">
                 <p class="project-number">01 · Early design study</p>
-                <span class="case-file-status">Learning record</span>
+                <span class="case-file-status" data-filter-field>Learning record</span>
               </div>
-              <h3 id="project-early-portfolio">Early Webflow Portfolio</h3>
-              <p class="case-file-summary">
+              <h3 id="project-early-portfolio" data-filter-field>Early Webflow Portfolio</h3>
+              <p class="case-file-summary" data-filter-field>
                 An early portfolio created for a writing course. It is included as an honest record
                 of how my visual hierarchy, spacing, content strategy, and technical confidence have changed.
               </p>
@@ -159,7 +184,7 @@
             </div>
           </article>
 
-          <article class="case-file" aria-labelledby="project-yunshang">
+          <article class="case-file" aria-labelledby="project-yunshang" data-filter-card>
             <figure class="case-file-media">
               <div class="case-file-gallery">
                 <img
@@ -179,10 +204,10 @@
             <div class="case-file-content">
               <div class="case-file-heading">
                 <p class="project-number">02 · Production website</p>
-                <span class="case-file-status">Live</span>
+                <span class="case-file-status" data-filter-field>Live</span>
               </div>
-              <h3 id="project-yunshang">Yunshang Rice Noodle</h3>
-              <p class="case-file-summary">
+              <h3 id="project-yunshang" data-filter-field>Yunshang Rice Noodle</h3>
+              <p class="case-file-summary" data-filter-field>
                 A bilingual restaurant website that connects brand storytelling with practical
                 menu, location, event, and ordering information.
               </p>
@@ -218,7 +243,7 @@
             </div>
           </article>
 
-          <article class="case-file" aria-labelledby="project-smme">
+          <article class="case-file" aria-labelledby="project-smme" data-filter-card>
             <figure class="case-file-media">
               <div class="case-file-gallery">
                 <img
@@ -238,10 +263,10 @@
             <div class="case-file-content">
               <div class="case-file-heading">
                 <p class="project-number">03 · Brand landing page</p>
-                <span class="case-file-status">Archived build</span>
+                <span class="case-file-status" data-filter-field>Archived build</span>
               </div>
-              <h3 id="project-smme">SMM Entertainment</h3>
-              <p class="case-file-summary">
+              <h3 id="project-smme" data-filter-field>SMM Entertainment</h3>
+              <p class="case-file-summary" data-filter-field>
                 A cinematic full-page landing experience designed around scene changes, large
                 typography, controlled navigation, and motion-led visual direction.
               </p>
@@ -282,7 +307,7 @@
             </div>
           </article>
 
-          <article class="case-file" aria-labelledby="project-vectorpath">
+          <article class="case-file" aria-labelledby="project-vectorpath" data-filter-card>
             <figure class="case-file-media">
               <div class="case-file-gallery">
                 <img
@@ -302,10 +327,10 @@
             <div class="case-file-content">
               <div class="case-file-heading">
                 <p class="project-number">04 · Game interface modification</p>
-                <span class="case-file-status case-file-status-private">Public prototype</span>
+                <span class="case-file-status case-file-status-private" data-filter-field>Public prototype</span>
               </div>
-              <h3 id="project-vectorpath">VectorPath HUD</h3>
-              <p class="case-file-summary">
+              <h3 id="project-vectorpath" data-filter-field>VectorPath HUD</h3>
+              <p class="case-file-summary" data-filter-field>
                 A navigation aid for manual piloting in Space Engineers that turns live ship and route
                 data into readable cockpit guidance without taking control away from the player.
               </p>
