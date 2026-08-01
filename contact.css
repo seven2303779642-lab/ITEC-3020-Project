@@ -350,6 +350,10 @@
   padding-top: 2rem;
 }
 
+.contact-form[hidden] {
+  display: none;
+}
+
 .contact-field {
   display: grid;
   gap: 0.65rem;
@@ -404,6 +408,23 @@
   color: var(--theme-muted);
 }
 
+.contact-field input[aria-invalid="true"],
+.contact-field textarea[aria-invalid="true"] {
+  border-color: var(--crimson);
+  box-shadow: 4px 4px 0 rgba(179, 10, 25, 0.12);
+}
+
+.form-error {
+  color: var(--crimson);
+  font-size: 0.76rem;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.form-error[hidden] {
+  display: none;
+}
+
 .reason-options {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -454,6 +475,10 @@
   outline-offset: 3px;
 }
 
+.contact-reasons[aria-invalid="true"] .reason-options label > span {
+  border-color: var(--crimson);
+}
+
 .form-actions {
   display: flex;
   align-items: center;
@@ -498,6 +523,61 @@
   transform: translate(-2px, -2px);
   background: var(--fixed-ink);
   box-shadow: 4px 4px 0 var(--gold);
+}
+
+.form-success {
+  display: grid;
+  min-height: 34rem;
+  align-content: center;
+  justify-items: start;
+  margin-top: 2rem;
+  border-block: 1px solid var(--ink);
+  padding: 3rem 0;
+}
+
+.form-success[hidden] {
+  display: none;
+}
+
+.form-success-signal {
+  display: grid;
+  width: 5.5rem;
+  height: 5.5rem;
+  place-items: center;
+  margin-top: 2rem;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  background: rgba(212, 168, 93, 0.12);
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  box-shadow:
+    0 0 0 1.25rem rgba(169, 31, 80, 0.06),
+    0 0 0 2.5rem rgba(212, 168, 93, 0.035);
+}
+
+.form-success h3 {
+  margin: 3rem 0 0;
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+}
+
+.form-success > p:not(.console-code) {
+  max-width: 35rem;
+  margin: 1.25rem 0 0;
+  color: var(--body-copy);
+  line-height: 1.75;
+}
+
+.form-success .transmit-button {
+  margin-top: 2rem;
+}
+
+:root[data-theme="dark"] .form-error {
+  color: #ff789c;
 }
 
 @media (max-width: 900px) {
