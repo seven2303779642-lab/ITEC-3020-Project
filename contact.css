@@ -165,7 +165,7 @@
   border-right: 1px solid rgba(212, 168, 93, 0.5);
   background:
     linear-gradient(145deg, rgba(169, 31, 80, 0.16), transparent 44%),
-    var(--ink);
+    var(--fixed-ink);
 }
 
 .contact-directory h2,
@@ -378,7 +378,7 @@
   width: 100%;
   border: 1px solid rgba(23, 18, 20, 0.38);
   border-radius: 0;
-  background: rgba(255, 255, 255, 0.58);
+  background: var(--theme-input);
   color: var(--ink);
   font: inherit;
   transition:
@@ -401,7 +401,7 @@
 
 .contact-field input::placeholder,
 .contact-field textarea::placeholder {
-  color: #756870;
+  color: var(--theme-muted);
 }
 
 .reason-options {
@@ -428,7 +428,7 @@
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(23, 18, 20, 0.38);
-  background: rgba(255, 255, 255, 0.58);
+  background: var(--theme-input);
   color: var(--body-copy);
   font-size: 0.72rem;
   letter-spacing: 0.06em;
@@ -445,7 +445,7 @@
 
 .reason-options input:checked + span {
   border-color: var(--ink);
-  background: var(--ink);
+  background: var(--fixed-ink);
   color: white;
 }
 
@@ -496,7 +496,7 @@
 
 .transmit-button:hover {
   transform: translate(-2px, -2px);
-  background: var(--ink);
+  background: var(--fixed-ink);
   box-shadow: 4px 4px 0 var(--gold);
 }
 

@@ -28,7 +28,7 @@
 .projects-ghost-link:hover {
   border-color: var(--gold);
   background: var(--gold);
-  color: var(--ink);
+  color: var(--fixed-ink);
 }
 
 .project-register {
@@ -115,7 +115,7 @@
   flex-direction: column;
   margin: 0;
   border-bottom: 1px solid var(--ink);
-  background: var(--ink);
+  background: var(--fixed-ink);
 }
 
 .case-file-gallery {
@@ -130,7 +130,7 @@
   aspect-ratio: 16 / 9;
   object-fit: contain;
   object-position: center;
-  background: var(--ink);
+  background: var(--fixed-ink);
 }
 
 .case-file-media figcaption {
@@ -169,7 +169,7 @@
 
 .case-file-status-private {
   border-color: rgba(212, 168, 93, 0.5);
-  background: var(--ink);
+  background: var(--fixed-ink);
   color: var(--gold);
 }
 
