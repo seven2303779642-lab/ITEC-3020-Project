@@ -14,6 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="js/theme.js" defer></script>
     <script src="js/components.js" defer></script>
+    <script src="js/blog.js" defer></script>
   </head>
 
   <body data-active-page="blog.html" class="site-shell min-h-screen text-[#171214] antialiased">
@@ -22,22 +23,26 @@
     <div id="header-placeholder" data-component-placeholder="header"></div>
 
     <main id="main-content">
-      <article class="blog-post-template-page">
+      <article class="blog-post-template-page" data-blog-post>
+        <p id="blog-load-status" class="blog-load-status" role="status">Loading blog entry…</p>
+
         <header class="blog-post-template-header border-b border-[#171214]">
           <div class="mx-auto max-w-5xl px-5 py-12 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
             <a class="project-link" href="blog.html">
               <span aria-hidden="true">←</span> Back to build memo
             </a>
 
-            <p class="eyebrow mt-12">Writing template · Personal draft</p>
-            <h1>Not edited</h1>
-            <p class="blog-post-template-summary">Not edited</p>
+            <p class="eyebrow mt-12">
+              Writing template · <span data-post-category>Loading</span>
+            </p>
+            <h1 data-post-title>Loading entry</h1>
+            <p class="blog-post-template-summary" data-post-summary>Loading entry data…</p>
 
             <dl class="blog-post-template-meta">
-              <div><dt>Date</dt><dd>Not edited</dd></div>
-              <div><dt>Category</dt><dd>Not edited</dd></div>
-              <div><dt>Entry</dt><dd>Not edited</dd></div>
-              <div><dt>Status</dt><dd>Not edited</dd></div>
+              <div><dt>Date</dt><dd data-post-date>Loading</dd></div>
+              <div><dt>Category</dt><dd data-post-meta-category>Loading</dd></div>
+              <div><dt>Entry</dt><dd data-post-entry>Loading</dd></div>
+              <div><dt>Status</dt><dd data-post-status>Loading</dd></div>
             </dl>
           </div>
         </header>
@@ -58,25 +63,25 @@
             <section aria-labelledby="feature-description-title">
               <p class="blog-template-section-number">01</p>
               <h2 id="feature-description-title">What the feature does</h2>
-              <p>Not edited</p>
+              <p data-post-feature>Loading entry data…</p>
             </section>
 
             <section aria-labelledby="implementation-approach-title">
               <p class="blog-template-section-number">02</p>
               <h2 id="implementation-approach-title">How I approached it</h2>
-              <p>Not edited</p>
+              <p data-post-approach>Loading entry data…</p>
             </section>
 
             <section aria-labelledby="implementation-challenges-title">
               <p class="blog-template-section-number">03</p>
               <h2 id="implementation-challenges-title">Challenges I encountered</h2>
-              <p>Not edited</p>
+              <p data-post-challenges>Loading entry data…</p>
             </section>
 
             <section aria-labelledby="lessons-learned-title">
               <p class="blog-template-section-number">04</p>
               <h2 id="lessons-learned-title">What I learned</h2>
-              <p>Not edited</p>
+              <p data-post-learning>Loading entry data…</p>
             </section>
           </div>
         </div>
@@ -88,10 +93,10 @@
               <h2>Add proof before marking the note complete.</h2>
             </div>
             <ul>
-              <li><span>Code reference</span><strong>Not edited</strong></li>
-              <li><span>Screenshot</span><strong>Not edited</strong></li>
-              <li><span>Test result</span><strong>Not edited</strong></li>
-              <li><span>Next action</span><strong>Not edited</strong></li>
+              <li><span>Code reference</span><strong data-evidence-code>Loading</strong></li>
+              <li><span>Screenshot</span><strong data-evidence-screenshot>Loading</strong></li>
+              <li><span>Test result</span><strong data-evidence-test>Loading</strong></li>
+              <li><span>Next action</span><strong data-evidence-next>Loading</strong></li>
             </ul>
           </div>
         </section>

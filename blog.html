@@ -14,6 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="js/theme.js" defer></script>
     <script src="js/components.js" defer></script>
+    <script src="js/blog.js" defer></script>
   </head>
 
   <body data-active-page="blog.html" class="site-shell min-h-screen text-[#171214] antialiased">
@@ -26,7 +27,7 @@
         <div class="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
           <div class="blog-masthead" aria-label="Personal blog memo information">
             <span>SL / Build Memo</span>
-            <span>Draft 04 · Next pass: Phase 2</span>
+            <span id="blog-record-count">Loading JSON records</span>
           </div>
 
           <div class="blog-editorial-heading">
@@ -57,109 +58,25 @@
 
       <section id="blog-list" class="blog-journal mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
         <div class="blog-section-label">
-          <p>Next note to finish</p>
-          <p>Keep the newest completed note first</p>
+          <p>Newest note first</p>
+          <p>Dates are formatted in the browser</p>
         </div>
 
-        <article class="blog-featured-post" aria-labelledby="blog-theme-title">
-          <p class="blog-featured-number" aria-hidden="true">01</p>
-
-          <div class="blog-featured-copy">
-            <p class="blog-category">Not edited</p>
-            <h2 id="blog-theme-title">Not edited</h2>
-            <p class="blog-featured-summary">Not edited</p>
-            <p class="blog-featured-detail">Not edited</p>
-            <a class="blog-entry-button" href="blogPostTemplate.html?entry=01">
-              Open writing template <span aria-hidden="true">→</span>
-            </a>
-          </div>
-
-          <dl class="blog-featured-facts">
-            <div>
-              <dt>Feature</dt>
-              <dd>Not edited</dd>
-            </div>
-            <div>
-              <dt>Storage</dt>
-              <dd>Not edited</dd>
-            </div>
-            <div>
-              <dt>Phase</dt>
-              <dd>Not edited</dd>
-            </div>
-            <div>
-              <dt>Status</dt>
-              <dd>Not edited</dd>
-            </div>
-          </dl>
-        </article>
+        <p id="blog-load-status" class="blog-load-status" role="status">Loading blog entries…</p>
+        <div id="blog-featured"></div>
 
         <div class="blog-archive-heading">
           <div>
-            <p class="eyebrow">Writing backlog</p>
-            <h2>Three notes I still need to finish.</h2>
+            <p class="eyebrow">Earlier records</p>
+            <h2>Older notes, kept in date order.</h2>
           </div>
           <p>
-            Keep each entry short at first. Add the real steps, mistakes, screenshots, and lessons
-            only after the related feature has been tested.
+            Edit the JSON record when a draft changes. The page will reorder entries without
+            rewriting the HTML.
           </p>
         </div>
 
-        <ol class="blog-archive-list">
-          <li>
-            <article class="blog-archive-entry" aria-labelledby="blog-json-title">
-              <p class="blog-archive-number" aria-hidden="true">02</p>
-              <div>
-                <p class="blog-category">Not edited</p>
-                <h3 id="blog-json-title">Not edited</h3>
-                <p>Not edited</p>
-                <a class="blog-entry-button" href="blogPostTemplate.html?entry=02">
-                  Open writing template <span aria-hidden="true">→</span>
-                </a>
-              </div>
-              <dl>
-                <div><dt>Feature</dt><dd>Not edited</dd></div>
-                <div><dt>Phase</dt><dd>Not edited</dd></div>
-              </dl>
-            </article>
-          </li>
-
-          <li>
-            <article class="blog-archive-entry" aria-labelledby="blog-validation-title">
-              <p class="blog-archive-number" aria-hidden="true">03</p>
-              <div>
-                <p class="blog-category">Not edited</p>
-                <h3 id="blog-validation-title">Not edited</h3>
-                <p>Not edited</p>
-                <a class="blog-entry-button" href="blogPostTemplate.html?entry=03">
-                  Open writing template <span aria-hidden="true">→</span>
-                </a>
-              </div>
-              <dl>
-                <div><dt>Feature</dt><dd>Not edited</dd></div>
-                <div><dt>Phase</dt><dd>Not edited</dd></div>
-              </dl>
-            </article>
-          </li>
-
-          <li>
-            <article class="blog-archive-entry" aria-labelledby="blog-filter-title">
-              <p class="blog-archive-number" aria-hidden="true">04</p>
-              <div>
-                <p class="blog-category">Not edited</p>
-                <h3 id="blog-filter-title">Not edited</h3>
-                <p>Not edited</p>
-                <a class="blog-entry-button" href="blogPostTemplate.html?entry=04">
-                  Open writing template <span aria-hidden="true">→</span>
-                </a>
-              </div>
-              <dl>
-                <div><dt>Feature</dt><dd>Not edited</dd></div>
-                <div><dt>Phase</dt><dd>Not edited</dd></div>
-              </dl>
-            </article>
-          </li>
-        </ol>
+        <ol id="blog-archive-list" class="blog-archive-list"></ol>
       </section>
 
       <section class="border-b border-[#171214]">

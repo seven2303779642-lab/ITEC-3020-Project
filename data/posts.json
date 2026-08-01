@@ -1,0 +1,98 @@
+[
+  {
+    "id": "entry-04",
+    "entry": "04",
+    "date": "2026-07-31",
+    "title": "Not edited",
+    "category": "Not edited",
+    "summary": "Not edited",
+    "detail": "Not edited",
+    "feature": "Not edited",
+    "phase": "Not edited",
+    "status": "Not edited",
+    "content": {
+      "featureDescription": "Not edited",
+      "approach": "Not edited",
+      "challenges": "Not edited",
+      "learning": "Not edited"
+    },
+    "evidence": {
+      "codeReference": "Not edited",
+      "screenshot": "Not edited",
+      "testResult": "Not edited",
+      "nextAction": "Not edited"
+    }
+  },
+  {
+    "id": "entry-03",
+    "entry": "03",
+    "date": "2026-07-30",
+    "title": "Not edited",
+    "category": "Not edited",
+    "summary": "Not edited",
+    "detail": "Not edited",
+    "feature": "Not edited",
+    "phase": "Not edited",
+    "status": "Not edited",
+    "content": {
+      "featureDescription": "Not edited",
+      "approach": "Not edited",
+      "challenges": "Not edited",
+      "learning": "Not edited"
+    },
+    "evidence": {
+      "codeReference": "Not edited",
+      "screenshot": "Not edited",
+      "testResult": "Not edited",
+      "nextAction": "Not edited"
+    }
+  },
+  {
+    "id": "entry-02",
+    "entry": "02",
+    "date": "2026-07-29",
+    "title": "Not edited",
+    "category": "Not edited",
+    "summary": "Not edited",
+    "detail": "Not edited",
+    "feature": "Not edited",
+    "phase": "Not edited",
+    "status": "Not edited",
+    "content": {
+      "featureDescription": "Not edited",
+      "approach": "Not edited",
+      "challenges": "Not edited",
+      "learning": "Not edited"
+    },
+    "evidence": {
+      "codeReference": "Not edited",
+      "screenshot": "Not edited",
+      "testResult": "Not edited",
+      "nextAction": "Not edited"
+    }
+  },
+  {
+    "id": "entry-01",
+    "entry": "01",
+    "date": "2026-07-28",
+    "title": "Not edited",
+    "category": "Not edited",
+    "summary": "Not edited",
+    "detail": "Not edited",
+    "feature": "Not edited",
+    "phase": "Not edited",
+    "status": "Not edited",
+    "content": {
+      "featureDescription": "Not edited",
+      "approach": "Not edited",
+      "challenges": "Not edited",
+      "learning": "Not edited"
+    },
+    "evidence": {
+      "codeReference": "Not edited",
+      "screenshot": "Not edited",
+      "testResult": "Not edited",
+      "nextAction": "Not edited"
+    }
+  }
+]
