@@ -25,6 +25,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="js/theme.js" defer></script>
     <script src="js/components.js" defer></script>
+    <script src="js/validate.js" defer></script>
   </head>
 
   <body data-active-page="contact.html" class="site-shell min-h-screen text-[#171214] antialiased">
@@ -63,7 +64,7 @@
             </div>
             <div>
               <dt>Build</dt>
-              <dd>Portfolio 0.2.2</dd>
+              <dd>Portfolio 0.2.3</dd>
             </div>
           </dl>
         </div>
@@ -120,7 +121,7 @@
               </div>
               <div>
                 <dt>Form state</dt>
-                <dd>Static interface prototype</dd>
+                <dd>Client-side validation active</dd>
               </div>
             </dl>
 
@@ -138,7 +139,14 @@
               <span class="form-sequence" aria-hidden="true">01—05</span>
             </div>
 
-            <form class="contact-form" action="#" method="post" aria-describedby="form-note">
+            <form
+              id="contact-form"
+              class="contact-form"
+              action="#"
+              method="post"
+              aria-describedby="form-note"
+              novalidate
+            >
               <div class="contact-field">
                 <label for="contact-name"><span>01</span> Your name</label>
                 <input
@@ -147,8 +155,16 @@
                   type="text"
                   autocomplete="name"
                   placeholder="Enter your name"
+                  aria-describedby="contact-name-error"
+                  aria-invalid="false"
                   required
                 >
+                <span
+                  id="contact-name-error"
+                  class="form-error"
+                  aria-live="polite"
+                  hidden
+                ></span>
               </div>
 
               <div class="contact-field">
@@ -159,8 +175,16 @@
                   type="email"
                   autocomplete="email"
                   placeholder="name@example.com"
+                  aria-describedby="contact-email-error"
+                  aria-invalid="false"
                   required
                 >
+                <span
+                  id="contact-email-error"
+                  class="form-error"
+                  aria-live="polite"
+                  hidden
+                ></span>
               </div>
 
               <div class="contact-field">
@@ -170,11 +194,24 @@
                   name="subject"
                   type="text"
                   placeholder="What would you like to discuss?"
+                  aria-describedby="contact-subject-error"
+                  aria-invalid="false"
                   required
                 >
+                <span
+                  id="contact-subject-error"
+                  class="form-error"
+                  aria-live="polite"
+                  hidden
+                ></span>
               </div>
 
-              <fieldset class="contact-field contact-reasons">
+              <fieldset
+                id="contact-message-type"
+                class="contact-field contact-reasons"
+                aria-describedby="contact-message-type-error"
+                aria-invalid="false"
+              >
                 <legend><span>04</span> Message type</legend>
                 <div class="reason-options">
                   <label>
@@ -190,6 +227,12 @@
                     <span>General</span>
                   </label>
                 </div>
+                <span
+                  id="contact-message-type-error"
+                  class="form-error"
+                  aria-live="polite"
+                  hidden
+                ></span>
               </fieldset>
 
               <div class="contact-field">
@@ -199,19 +242,46 @@
                   name="message"
                   rows="7"
                   placeholder="Add the context, goal, and any useful timeline."
+                  aria-describedby="contact-message-error"
+                  aria-invalid="false"
                   required
                 ></textarea>
+                <span
+                  id="contact-message-error"
+                  class="form-error"
+                  aria-live="polite"
+                  hidden
+                ></span>
               </div>
 
               <div class="form-actions">
                 <p id="form-note">
-                  This form is currently a visual prototype. Message submission will be added in Phase 2.
+                  This classroom demo validates your message locally and simulates submission.
                 </p>
                 <button class="transmit-button" type="submit">
                   Send transmission <span aria-hidden="true">→</span>
                 </button>
               </div>
             </form>
+
+            <div
+              id="form-success"
+              class="form-success"
+              role="status"
+              tabindex="-1"
+              hidden
+            >
+              <p class="console-code">STATUS / VALIDATED</p>
+              <span class="form-success-signal" aria-hidden="true">OK</span>
+              <h3>Transmission validated.</h3>
+              <p>
+                The form passed every local check. This classroom demonstration did not send a
+                real email or store your message.
+              </p>
+              <button id="send-another-message" class="transmit-button" type="button">
+                Send another message <span aria-hidden="true">→</span>
+              </button>
+            </div>
           </section>
         </div>
       </section>
