@@ -78,24 +78,30 @@ function renderFeaturedPost(post) {
   const article = createElement('article', 'blog-featured-post');
   const headingId = `blog-title-${post.id}`;
   article.setAttribute('aria-labelledby', headingId);
+  article.dataset.filterCard = '';
 
   const number = createElement('p', 'blog-featured-number', post.entry);
   number.setAttribute('aria-hidden', 'true');
 
   const copy = createElement('div', 'blog-featured-copy');
   const categoryLine = createElement('div', 'blog-category-line');
+  const category = createElement('p', 'blog-category', post.category);
+  category.dataset.filterField = '';
   categoryLine.append(
-    createElement('p', 'blog-category', post.category),
+    category,
     createElement('span', 'latest-post-badge', 'Latest post'),
   );
 
   const heading = createElement('h2', '', post.title);
   heading.id = headingId;
+  heading.dataset.filterField = '';
+  const summary = createElement('p', 'blog-featured-summary', post.summary);
+  summary.dataset.filterField = '';
 
   copy.append(
     categoryLine,
     heading,
-    createElement('p', 'blog-featured-summary', post.summary),
+    summary,
     createElement('p', 'blog-featured-detail', post.detail),
     createPostLink(post),
   );
@@ -116,6 +122,7 @@ function renderFeaturedPost(post) {
 
 function renderArchivePost(post) {
   const listItem = createElement('li');
+  listItem.dataset.filterCard = '';
   const article = createElement('article', 'blog-archive-entry');
   const headingId = `blog-title-${post.id}`;
   article.setAttribute('aria-labelledby', headingId);
@@ -124,12 +131,17 @@ function renderArchivePost(post) {
   number.setAttribute('aria-hidden', 'true');
 
   const copy = createElement('div');
+  const category = createElement('p', 'blog-category', post.category);
+  category.dataset.filterField = '';
   const heading = createElement('h3', '', post.title);
   heading.id = headingId;
+  heading.dataset.filterField = '';
+  const summary = createElement('p', '', post.summary);
+  summary.dataset.filterField = '';
   copy.append(
-    createElement('p', 'blog-category', post.category),
+    category,
     heading,
-    createElement('p', '', post.summary),
+    summary,
     createPostLink(post),
   );
 
@@ -172,6 +184,11 @@ function renderBlogIndex(posts) {
   }
 
   setLoadState('');
+  document.dispatchEvent(
+    new CustomEvent('blog:rendered', {
+      detail: { postCount: posts.length },
+    }),
+  );
 }
 
 function setText(selector, value) {

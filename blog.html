@@ -15,6 +15,7 @@
     <script src="js/theme.js" defer></script>
     <script src="js/components.js" defer></script>
     <script src="js/blog.js" defer></script>
+    <script src="js/filter.js" defer></script>
   </head>
 
   <body data-active-page="blog.html" class="site-shell min-h-screen text-[#171214] antialiased">
@@ -60,6 +61,30 @@
         <div class="blog-section-label">
           <p>Newest note first</p>
           <p>Dates are formatted in the browser</p>
+        </div>
+
+        <div class="content-filter" role="search" aria-label="Filter blog records">
+          <div class="content-filter-heading">
+            <label for="blog-filter">Search blog records</label>
+            <span id="blog-filter-count" aria-live="polite">Loading records</span>
+          </div>
+          <div class="content-filter-control">
+            <span aria-hidden="true">QUERY /</span>
+            <input
+              id="blog-filter"
+              type="search"
+              placeholder="Search title, category, or summary"
+              autocomplete="off"
+              aria-controls="blog-featured blog-archive-list"
+              data-filter-input
+              data-filter-cards="#blog-list [data-filter-card]"
+              data-filter-empty="blog-no-results"
+              data-filter-count="blog-filter-count"
+            >
+          </div>
+          <p id="blog-no-results" class="filter-no-results" role="status" hidden>
+            No blog records match this search. Try a title, category, or summary keyword.
+          </p>
         </div>
 
         <p id="blog-load-status" class="blog-load-status" role="status">Loading blog entries…</p>
