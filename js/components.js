@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   try {
     const [header, footer] = await Promise.all([
-      loadComponent('#header-placeholder', 'components/header.html'),
-      loadComponent('#footer-placeholder', 'components/footer.html'),
+      loadComponent('#header-placeholder', 'components/header.html?v=0.3.0'),
+      loadComponent('#footer-placeholder', 'components/footer.html?v=0.3.0'),
     ]);
 
     markActivePage(header, activePage);

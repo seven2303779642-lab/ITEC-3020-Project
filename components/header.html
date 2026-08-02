@@ -1,34 +1,73 @@
-<header class="border-b border-[#171214]/15 bg-stone-50/90 backdrop-blur">
-  <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-5 sm:px-8 lg:px-12">
-    <a class="group inline-flex items-center gap-3" href="index.html" aria-label="Songang Li home">
+<header class="site-header border-b border-[#171214]/15 bg-stone-50/90 backdrop-blur">
+  <div class="site-header-inner mx-auto max-w-7xl px-5 py-5 sm:px-8 lg:px-12">
+    <a class="site-brand group" href="index.html" aria-label="Songang Li home">
       <span class="brand-mark" aria-hidden="true">SL</span>
-      <span>
+      <span class="site-brand-copy">
         <span class="block text-sm font-semibold tracking-tight">Songang Li</span>
         <span class="block text-xs text-[#734051]">IT student · Toronto</span>
       </span>
     </a>
 
-    <nav aria-label="Primary navigation">
-      <ul class="flex flex-wrap items-center justify-end gap-x-1 gap-y-2 text-sm">
-        <li><a class="nav-link" href="index.html">Home</a></li>
-        <li><a class="nav-link" href="about.html">About</a></li>
-        <li><a class="nav-link" href="resume.html">Resume</a></li>
-        <li><a class="nav-link" href="projects.html">Projects</a></li>
-        <li><a class="nav-link" href="blog.html">Blog</a></li>
-        <li><a class="nav-link" href="contact.html">Contact</a></li>
-        <li>
-          <button
-            id="theme-toggle"
-            class="theme-toggle"
-            type="button"
-            aria-pressed="false"
-            aria-label="Theme: light. Switch to dark theme"
-          >
-            <span class="theme-toggle-icon" data-theme-icon aria-hidden="true">Sun</span>
-            <span class="theme-toggle-label">Theme / <span data-theme-label>light</span></span>
-          </button>
-        </li>
-      </ul>
-    </nav>
+    <button
+      id="mobile-nav-toggle"
+      class="mobile-nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-navigation-panel"
+    >
+      <span>Menu</span>
+      <span class="mobile-nav-toggle-lines" aria-hidden="true"><i></i><i></i></span>
+    </button>
+
+    <div class="mobile-nav-backdrop" data-nav-close aria-hidden="true"></div>
+
+    <div
+      id="site-navigation-panel"
+      class="site-navigation-panel"
+      data-mobile-navigation
+      aria-hidden="false"
+      inert
+    >
+      <div class="mobile-nav-heading">
+        <div>
+          <p>Navigation / 06</p>
+          <strong>Site directory</strong>
+        </div>
+        <button id="mobile-nav-close" class="mobile-nav-close" type="button">
+          Close <span aria-hidden="true">×</span>
+        </button>
+      </div>
+
+      <nav class="site-navigation" aria-label="Primary navigation">
+        <ul class="site-navigation-list">
+          <li><a class="nav-link" href="index.html"><span class="mobile-nav-index" aria-hidden="true">01</span>Home</a></li>
+          <li><a class="nav-link" href="about.html"><span class="mobile-nav-index" aria-hidden="true">02</span>About</a></li>
+          <li><a class="nav-link" href="resume.html"><span class="mobile-nav-index" aria-hidden="true">03</span>Resume</a></li>
+          <li><a class="nav-link" href="projects.html"><span class="mobile-nav-index" aria-hidden="true">04</span>Projects</a></li>
+          <li><a class="nav-link" href="blog.html"><span class="mobile-nav-index" aria-hidden="true">05</span>Blog</a></li>
+          <li><a class="nav-link" href="contact.html"><span class="mobile-nav-index" aria-hidden="true">06</span>Contact</a></li>
+          <li class="theme-navigation-item">
+            <button
+              id="theme-toggle"
+              class="theme-toggle"
+              type="button"
+              aria-pressed="false"
+              aria-label="Theme: light. Switch to dark theme"
+            >
+              <span class="theme-toggle-icon" data-theme-icon aria-hidden="true">Sun</span>
+              <span class="theme-toggle-label">Theme / <span data-theme-label>light</span></span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="mobile-nav-profiles">
+        <p>Public profiles</p>
+        <div>
+          <a href="https://github.com/seven2303779642-lab" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/seven-li-569506422" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
