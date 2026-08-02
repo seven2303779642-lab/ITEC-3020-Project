@@ -712,9 +712,70 @@ a.project-link:hover {
    ========================================================================== */
 
 @media (max-width: 859px) {
+  :root {
+    /* Shared vertical rhythm for stacked tablet and mobile layouts. */
+    --mobile-section-space: 3.5rem;
+    --mobile-hero-space: 4.5rem;
+    --mobile-terminal-space: 2.5rem;
+    --mobile-group-space: 2rem;
+    --mobile-item-space: 1rem;
+  }
+
   html,
   body {
     overflow-x: clip;
+  }
+
+  main .mobile-section-spacing {
+    padding-block: var(--mobile-section-space);
+  }
+
+  main .mobile-hero-spacing {
+    padding-block: var(--mobile-hero-space);
+  }
+
+  main .mobile-terminal-spacing {
+    padding-block: var(--mobile-terminal-space);
+  }
+
+  main .mobile-group-spacing {
+    gap: var(--mobile-group-space);
+  }
+
+  main .mobile-group-margin {
+    margin-top: var(--mobile-group-space);
+  }
+
+  main,
+  main section,
+  main article,
+  main aside,
+  main figure,
+  main div {
+    min-width: 0;
+  }
+
+  main img,
+  main video,
+  main iframe {
+    max-width: 100%;
+  }
+
+  main h1,
+  main h2,
+  main h3,
+  main dd,
+  main strong {
+    overflow-wrap: break-word;
+  }
+
+  .project-link,
+  .home-project-action,
+  .blog-back-link {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    padding-top: 0.55rem;
   }
 
   #header-placeholder {
@@ -1019,8 +1080,23 @@ a.project-link:hover {
 }
 
 @media (max-width: 430px) {
+  :root {
+    --mobile-section-space: 2.5rem;
+    --mobile-hero-space: 3.5rem;
+    --mobile-terminal-space: 2rem;
+    --mobile-group-space: 1.5rem;
+  }
+
   .site-brand-copy > span:last-child {
     display: none;
+  }
+
+  .resume-hero .button-primary,
+  .resume-hero .button-secondary,
+  .projects-hero .button-on-primary,
+  .projects-hero .projects-ghost-link,
+  .brand-band .button-on-primary {
+    width: 100%;
   }
 }
 

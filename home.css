@@ -1037,3 +1037,28 @@
     font-size: 3rem;
   }
 }
+
+@media (max-width: 859px) {
+  .home-hero-grid {
+    gap: var(--mobile-group-space);
+    padding-block: var(--mobile-hero-space);
+  }
+
+  .home-principle {
+    gap: var(--mobile-group-space);
+    padding-block: var(--mobile-section-space);
+  }
+
+  .home-work {
+    padding-block: var(--mobile-section-space);
+  }
+
+  .home-section-heading {
+    gap: var(--mobile-group-space);
+    padding-bottom: var(--mobile-group-space);
+  }
+
+  .home-current-vector {
+    margin-bottom: var(--mobile-terminal-space);
+  }
+}
