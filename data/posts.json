@@ -2,97 +2,97 @@
   {
     "id": "entry-04",
     "entry": "04",
-    "date": "2026-07-31",
-    "title": "Not edited",
-    "category": "Not edited",
-    "summary": "Not edited",
-    "detail": "Not edited",
-    "feature": "Not edited",
-    "phase": "Not edited",
-    "status": "Not edited",
+    "date": "2026-08-01T19:22:54-04:00",
+    "title": "Filtering Projects and Blog Posts Without Reloading",
+    "category": "Search and filtering",
+    "summary": "I added one shared live-search script that filters project records and JSON-generated blog posts while the user types.",
+    "detail": "The same code matches title, category, and summary text, updates the visible count, and shows a no-results message.",
+    "feature": "Live content filtering",
+    "version": "0.2.4",
+    "phase": "Phase 2 · Part 5",
+    "status": "Complete",
     "content": {
-      "featureDescription": "Not edited",
-      "approach": "Not edited",
-      "challenges": "Not edited",
-      "learning": "Not edited"
+      "featureDescription": "The Projects and Blog pages now have search fields that update their visible records immediately. A visitor can search by a title, category, or description without reloading the page. The interface also reports how many records remain and displays a clear message when nothing matches.",
+      "approach": "I wrote one shared filter.js file instead of creating separate scripts for the two pages. Each searchable card marks its title, category, and summary with data attributes. The script combines those fields into lowercase text, compares it with the current query, and hides non-matching records. This kept the filtering rules consistent on both pages.",
+      "challenges": "The Projects cards already existed when the page loaded, but the Blog cards did not. They were created later after posts.json finished loading. My first initialization point could not assume that both collections were ready. I solved this by dispatching a blog:rendered event after the posts were added, then running the shared filter setup. I also hid the archive list item instead of only its inner article so an empty bordered row was not left behind.",
+      "learning": "I learned that reusable code still needs to respect when each part of the page becomes available. Custom events gave the blog renderer and filter a simple connection without combining both features into one large script. Data attributes also made the search fields explicit and easier to maintain."
     },
     "evidence": {
-      "codeReference": "Not edited",
-      "screenshot": "Not edited",
-      "testResult": "Not edited",
-      "nextAction": "Not edited"
+      "codeReference": "js/filter.js and the blog:rendered event in js/blog.js",
+      "testResult": "Title, category, description, no-result, and clear-search cases passed",
+      "nextAction": "Retest every query after the final blog text is edited"
     }
   },
   {
     "id": "entry-03",
     "entry": "03",
-    "date": "2026-07-30",
-    "title": "Not edited",
-    "category": "Not edited",
-    "summary": "Not edited",
-    "detail": "Not edited",
-    "feature": "Not edited",
-    "phase": "Not edited",
-    "status": "Not edited",
+    "date": "2026-08-01T14:47:48-04:00",
+    "title": "Building Clear Contact Form Validation",
+    "category": "Form validation",
+    "summary": "I added client-side checks for every required contact field and created accessible inline errors and a simulated success state.",
+    "detail": "The form now validates names, email format, subject, message type, and a minimum twenty-character message before showing success.",
+    "feature": "Contact form validation",
+    "version": "0.2.3",
+    "phase": "Phase 2 · Part 4",
+    "status": "Complete",
     "content": {
-      "featureDescription": "Not edited",
-      "approach": "Not edited",
-      "challenges": "Not edited",
-      "learning": "Not edited"
+      "featureDescription": "The contact form now checks its required fields before continuing. Name, email, subject, message type, and message all receive their own inline feedback. The message must contain at least twenty characters. When every field is valid, the form is replaced by a success panel that clearly says the submission is only simulated.",
+      "approach": "I intercepted the submit event with preventDefault() and disabled the browser's default validation interface with novalidate. A small validation object stores each control, its error element, and its rule. The script updates aria-invalid, shows the correct error beside the field, focuses the first invalid control, and clears an error only after that field becomes valid.",
+      "challenges": "The radio buttons needed different handling from text inputs because the whole group represents one answer. Focusing the fieldset was not reliable, so I focus the first radio button when that group is the first error. I also had to keep the custom rules separate from real message delivery. The success screen confirms local validation without claiming that an email was sent.",
+      "learning": "I learned that form validation is not only a list of regular expressions. The location of each message, keyboard focus, ARIA state, and honest success wording all affect whether the form is understandable. A simulated submission should never pretend that data reached a server."
     },
     "evidence": {
-      "codeReference": "Not edited",
-      "screenshot": "Not edited",
-      "testResult": "Not edited",
-      "nextAction": "Not edited"
+      "codeReference": "js/validate.js and validation markup in contact.html",
+      "testResult": "Empty, invalid email, short message, valid submission, and reset cases passed",
+      "nextAction": "Connect a real form service only if the portfolio needs message delivery"
     }
   },
   {
     "id": "entry-02",
     "entry": "02",
-    "date": "2026-07-29",
-    "title": "Not edited",
-    "category": "Not edited",
-    "summary": "Not edited",
-    "detail": "Not edited",
-    "feature": "Not edited",
-    "phase": "Not edited",
-    "status": "Not edited",
+    "date": "2026-08-01T00:45:20-04:00",
+    "title": "Moving Blog Content Into JSON",
+    "category": "Dynamic content",
+    "summary": "I replaced hard-coded blog records with posts.json and used JavaScript to build both the index and the full article view.",
+    "detail": "Posts are sorted by publication time, dates are formatted for readers, and the newest record receives the Latest Post badge automatically.",
+    "feature": "JSON-powered blog",
+    "version": "0.2.2",
+    "phase": "Phase 2 · Part 3",
+    "status": "Complete",
     "content": {
-      "featureDescription": "Not edited",
-      "approach": "Not edited",
-      "challenges": "Not edited",
-      "learning": "Not edited"
+      "featureDescription": "The Blog page now loads its records from data/posts.json instead of keeping four repeated articles in the HTML. JavaScript sorts the posts from newest to oldest, formats each date, marks the latest post, and generates the remaining archive. The Read more link opens one reusable article page and selects the correct record from the URL.",
+      "approach": "I created a consistent object structure for the card text, four article sections, and evidence notes. In blog.js I used fetch() to read the file, copied and sorted the array, and created semantic elements with document.createElement(). The article page reads the post parameter with URLSearchParams and fills the existing template from the same object.",
+      "challenges": "Fetch does not work when the pages are opened directly through file://, so the project must run through a local HTTP server. I also wanted the list and article page to use one source without duplicating content. Stable post IDs in the URL solved that connection, and a visible load-error message explains the server requirement if the JSON request fails.",
+      "learning": "I learned that separating content from markup makes repeated pages much easier to update. Sorting, date formatting, and detail links belong in the rendering logic, while the writing belongs in JSON. I also learned to treat loading failure as part of the interface instead of only logging an error in the console."
     },
     "evidence": {
-      "codeReference": "Not edited",
-      "screenshot": "Not edited",
-      "testResult": "Not edited",
-      "nextAction": "Not edited"
+      "codeReference": "data/posts.json and js/blog.js",
+      "testResult": "JSON schema, newest-first sorting, page links, and HTTP loading passed",
+      "nextAction": "Keep future posts in the same object structure"
     }
   },
   {
     "id": "entry-01",
     "entry": "01",
-    "date": "2026-07-28",
-    "title": "Not edited",
-    "category": "Not edited",
-    "summary": "Not edited",
-    "detail": "Not edited",
-    "feature": "Not edited",
-    "phase": "Not edited",
-    "status": "Not edited",
+    "date": "2026-07-31T21:06:49-04:00",
+    "title": "Keeping the Theme Choice Between Pages",
+    "category": "Theme and localStorage",
+    "summary": "I built a shared light and dark theme control that saves the visitor's choice and restores it before each page is drawn.",
+    "detail": "The solution separates early theme loading from the interactive button so the correct palette appears without a visible flash.",
+    "feature": "Persistent theme switcher",
+    "version": "0.2.1",
+    "phase": "Phase 2 · Part 1",
+    "status": "Complete",
     "content": {
-      "featureDescription": "Not edited",
-      "approach": "Not edited",
-      "challenges": "Not edited",
-      "learning": "Not edited"
+      "featureDescription": "Every page now includes the same light and dark theme control in the shared navigation. The selected value is stored in localStorage, so it remains active after a reload or a move to another page. The button label and state also change to describe the theme that is currently being used.",
+      "approach": "I split the feature into theme-init.js and theme.js. The small initialization file runs in the head before the stylesheets and applies the saved value immediately. The main controller updates the root and body data-theme attributes, saves changes, and binds the button after the shared header has been fetched. CSS custom properties provide the two palettes.",
+      "challenges": "The theme button did not exist during the first DOMContentLoaded step because the header was injected asynchronously. I connected the scripts with the existing site:components-ready event so the button is bound at the correct time. Another issue was that the old --ink variable was used for both text and fixed dark panels. I separated semantic theme colors from fixed brand colors so dark mode would not turn those panels light.",
+      "learning": "I learned that a theme switcher depends on load order as much as color selection. Reading localStorage after the page appears creates an obvious flash. I also learned that semantic color variables are safer than naming colors only by appearance because the same token should represent the same interface role in both themes."
     },
     "evidence": {
-      "codeReference": "Not edited",
-      "screenshot": "Not edited",
-      "testResult": "Not edited",
-      "nextAction": "Not edited"
+      "codeReference": "js/theme-init.js, js/theme.js, and theme variables in global.css",
+      "testResult": "Theme persists across reloads and all seven pages",
+      "nextAction": "Check every new component in both palettes"
     }
   }
 ]
