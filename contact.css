@@ -659,3 +659,14 @@
     grid-template-columns: 2rem 1fr auto;
   }
 }
+
+@media (max-width: 859px) {
+  .contact-hero-inner {
+    gap: var(--mobile-group-space);
+    padding-block: var(--mobile-hero-space) var(--mobile-section-space);
+  }
+
+  .contact-console {
+    margin-bottom: var(--mobile-terminal-space);
+  }
+}

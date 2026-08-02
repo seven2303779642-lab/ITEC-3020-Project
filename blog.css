@@ -803,3 +803,31 @@
     grid-template-columns: 4rem minmax(0, 1fr) 13rem;
   }
 }
+
+@media (max-width: 430px) {
+  .blog-article-copy h1 {
+    font-size: clamp(2.65rem, 12vw, 3.25rem);
+    line-height: 0.94;
+  }
+
+  .blog-build-context {
+    padding: 1.35rem;
+  }
+
+  .blog-post-template-body section {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .blog-template-section-number {
+    font-size: 1.5rem;
+  }
+
+  .blog-post-template-body h2 {
+    margin-top: 0.2rem;
+  }
+
+  .blog-entry-button {
+    min-height: 2.75rem;
+  }
+}
