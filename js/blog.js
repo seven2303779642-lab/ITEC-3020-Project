@@ -19,7 +19,7 @@ function createElement(tagName, className, text) {
 }
 
 function formatPostDate(dateString) {
-  const date = new Date(`${dateString}T12:00:00`);
+  const date = new Date(dateString);
 
   if (Number.isNaN(date.getTime())) {
     return 'Date unavailable';
@@ -192,11 +192,9 @@ function renderBlogIndex(posts) {
 }
 
 function setText(selector, value) {
-  const element = document.querySelector(selector);
-
-  if (element) {
+  document.querySelectorAll(selector).forEach((element) => {
     element.textContent = value;
-  }
+  });
 }
 
 function renderPostPage(posts) {
@@ -216,12 +214,15 @@ function renderPostPage(posts) {
   setText('[data-post-meta-category]', post.category);
   setText('[data-post-entry]', post.entry);
   setText('[data-post-status]', post.status);
+  setText('[data-context-feature]', post.feature);
+  setText('[data-context-version]', post.version);
+  setText('[data-context-part]', post.phase);
+  setText('[data-context-status]', post.status);
   setText('[data-post-feature]', post.content.featureDescription);
   setText('[data-post-approach]', post.content.approach);
   setText('[data-post-challenges]', post.content.challenges);
   setText('[data-post-learning]', post.content.learning);
   setText('[data-evidence-code]', post.evidence.codeReference);
-  setText('[data-evidence-screenshot]', post.evidence.screenshot);
   setText('[data-evidence-test]', post.evidence.testResult);
   setText('[data-evidence-next]', post.evidence.nextAction);
 
