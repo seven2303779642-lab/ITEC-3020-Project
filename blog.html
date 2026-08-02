@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta
       name="description"
-      content="A personal development memo with unfinished technical writing slots."
+      content="Read Songang Li's development journal about portfolio features, implementation decisions, testing, and lessons learned."
     >
     <title>Blog | Songang Li</title>
     <script src="js/theme-init.js"></script>
@@ -27,31 +27,31 @@
     <main id="main-content">
       <section class="blog-editorial-hero border-b border-[#171214]">
         <div class="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
-          <div class="blog-masthead" aria-label="Personal blog memo information">
-            <span>SL / Build Memo</span>
-            <span id="blog-record-count">Loading JSON records</span>
+          <div class="blog-masthead" aria-label="Development journal information">
+            <span>SL / Development Journal</span>
+            <span id="blog-record-count">Loading development records</span>
           </div>
 
           <div class="blog-editorial-heading mobile-group-spacing">
             <div>
-              <p class="eyebrow">Note to self</p>
+              <p class="eyebrow">Development journal</p>
               <h1>
-                Keep track of
-                <span>what changed and why.</span>
+                Documenting what
+                <span>changed and why.</span>
               </h1>
             </div>
 
             <div class="blog-editorial-intro">
               <p>
-                Use this page to remember the decisions that are easy to forget once a feature
-                starts working.
+                This journal records the design decisions, implementation details, and testing
+                behind this portfolio.
               </p>
               <p>
-                Do not turn these notes into marketing copy. Record the problem, failed attempts,
-                final fix, and what still needs to be tested.
+                Each entry follows one feature from the initial problem through development,
+                setbacks, the final result, and lessons learned.
               </p>
               <a class="project-link" href="#blog-list">
-                Jump to unfinished entries <span aria-hidden="true">↓</span>
+                Browse development records <span aria-hidden="true">↓</span>
               </a>
             </div>
           </div>
@@ -60,13 +60,13 @@
 
       <section id="blog-list" class="blog-journal mobile-section-spacing mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
         <div class="blog-section-label">
-          <p>Newest note first</p>
-          <p>Dates are formatted in the browser</p>
+          <p>Newest record first</p>
+          <p>Design · Development · Testing</p>
         </div>
 
-        <div class="content-filter" role="search" aria-label="Filter blog records">
+        <div class="content-filter" role="search" aria-label="Filter development records">
           <div class="content-filter-heading">
-            <label for="blog-filter">Search blog records</label>
+            <label for="blog-filter">Search development records</label>
             <span id="blog-filter-count" aria-live="polite">Loading records</span>
           </div>
           <div class="content-filter-control">
@@ -84,21 +84,21 @@
             >
           </div>
           <p id="blog-no-results" class="filter-no-results" role="status" hidden>
-            No blog records match this search. Try a title, category, or summary keyword.
+            No development records match this search. Try a title, category, or summary keyword.
           </p>
         </div>
 
-        <p id="blog-load-status" class="blog-load-status" role="status">Loading blog entries…</p>
+        <p id="blog-load-status" class="blog-load-status" role="status">Loading development records…</p>
         <div id="blog-featured"></div>
 
         <div class="blog-archive-heading">
           <div>
             <p class="eyebrow">Earlier records</p>
-            <h2>Older notes, kept in date order.</h2>
+            <h2>Earlier entries, arranged by date.</h2>
           </div>
           <p>
-            Edit the JSON record when a draft changes. The page will reorder entries without
-            rewriting the HTML.
+            Each record is loaded from a shared JSON file and ordered automatically by
+            publication date.
           </p>
         </div>
 
@@ -108,13 +108,13 @@
       <section class="border-b border-[#171214]">
         <div class="mobile-terminal-spacing mx-auto flex max-w-7xl flex-col gap-6 px-5 py-12 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-12">
           <div>
-            <p class="eyebrow">Before writing</p>
+            <p class="eyebrow">Related work</p>
             <h2 class="mt-2 text-3xl font-semibold tracking-tight">
-              Check the project archive, then describe what actually happened.
+              Explore the projects featured throughout this portfolio.
             </h2>
           </div>
           <a class="button-primary" href="projects.html">
-            Review projects <span aria-hidden="true">→</span>
+            View projects <span aria-hidden="true">→</span>
           </a>
         </div>
       </section>

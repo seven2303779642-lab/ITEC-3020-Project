@@ -180,7 +180,7 @@ function renderBlogIndex(posts) {
   archiveList.replaceChildren(...posts.slice(1).map(renderArchivePost));
 
   if (recordCount) {
-    recordCount.textContent = `${String(posts.length).padStart(2, '0')} entries · JSON loaded`;
+    recordCount.textContent = `${String(posts.length).padStart(2, '0')} development records`;
   }
 
   setLoadState('');

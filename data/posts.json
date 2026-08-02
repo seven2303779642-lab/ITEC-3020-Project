@@ -20,7 +20,7 @@
     "evidence": {
       "codeReference": "js/filter.js and the blog:rendered event in js/blog.js",
       "testResult": "Title, category, description, no-result, and clear-search cases passed",
-      "nextAction": "Retest every query after the final blog text is edited"
+      "nextAction": "Review filter behavior whenever new searchable fields or record types are added"
     }
   },
   {
